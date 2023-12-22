@@ -1,0 +1,55 @@
+@import "config";
+
+* {
+    box-sizing: border-box;
+    width: fit-content;
+    height: fit-content;
+    background-color: transparent;
+    color: $color-primary;
+    font-size: $fs-8;
+    font-family: $font-major;
+    font-weight: 300;
+    text-align: center;
+    text-decoration: none;
+    padding: 0px;
+    border: none;
+    outline: none;
+    margin: 0px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+ol,
+ul,
+dl {
+    list-style-type: none;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+::-webkit-scrollbar,
+::-moz-scrollbar {
+    width: 0.10rem;
+}
+
+::-webkit-scrollbar-track,
+::-moz-scrollbar-track {
+    background: $color-primary;
+}
+
+::-webkit-scrollbar-thumb,
+::-moz-scrollbar-thumb {
+    background: lighten($color-primary, 5%);
+}
+
+::-webkit-scrollbar-thumb:hover,
+::-moz-scrollbar-thumb:hover {
+    background: darken($color-primary, 5%);
+}

@@ -1,0 +1,33 @@
+// Assets import
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Righteous&family=Roboto&family=Roboto+Condensed&family=Roboto+Mono&display=swap');
+
+// Fonts.
+$font-stylish: "Righteous", sans-serif;
+$font-major: "Roboto", sans-serif;
+$font-condensed:"Roboto Condensed",sans-serif;
+$font-mono:"Roboto Mono",monospace;
+$font-brand:"Montserrat",sans-serif;
+
+// Font Sizes.
+$fs-1: 6rem;
+$fs-2: 4rem;
+$fs-3: 3rem;
+$fs-4: 2rem;
+$fs-5: 1.8rem;
+$fs-6: 1.5rem;
+$fs-7: 1.2rem;
+$fs-8: 1rem;
+$fs-9: 0.9rem;
+$fs-10: 0.7rem;
+
+// Colors.
+$color-bg :#F0ECE5;
+$color-primary: #312F4D;
+$color-light:#626098;
+
+// Breakpoints.
+$breakpoint-large: 1920px;
+$breakpoint-medium: 1440px;
+$breakpoint-small: 1280px;
+$breakpoint-tablet: 1024px;
+$breakpoint-mobile: 481px;

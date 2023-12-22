@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Righteous&family=Roboto&family=Roboto+Condensed&family=Roboto+Mono&display=swap");
+* {
+  box-sizing: border-box;
+  width: fit-content;
+  height: fit-content;
+  background-color: transparent;
+  color: #161A30;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  text-decoration: none;
+  padding: 0px;
+  border: none;
+  outline: none;
+  margin: 0px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+ol,
+ul,
+dl {
+  list-style-type: none;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+::-webkit-scrollbar,
+::-moz-scrollbar {
+  width: 0.1rem;
+}
+
+::-webkit-scrollbar-track,
+::-moz-scrollbar-track {
+  background: #161A30;
+}
+
+::-webkit-scrollbar-thumb,
+::-moz-scrollbar-thumb {
+  background: #1e2341;
+}
+
+::-webkit-scrollbar-thumb:hover,
+::-moz-scrollbar-thumb:hover {
+  background: #0e111f;
+}
+
+/*# sourceMappingURL=default.css.map */

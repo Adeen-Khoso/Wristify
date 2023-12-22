@@ -1,0 +1,128 @@
+@mixin navbar {
+  .nav {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    max-width: 100%;
+    z-index: 10;
+    gap: 6em;
+    padding: 0.5rem 1rem;
+    background: transparent;
+
+    // branding
+    .branding {
+      grid-column: 1;
+      display: flex;
+      align-items: center;
+      z-index: 1000;
+
+      .branding-h1 {
+        font-family: $font-brand;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 16px;
+        color: $color-primary;
+        text-transform: uppercase;
+        transition: color 0.8s ease-in-out;
+      }
+      .logo {
+        width: 35px;
+        transition: 0.4s ease-in-out;
+      }
+    }
+    .branding.active .branding-h1 {
+      color: $color-light !important;
+    }
+    .branding.active .logo{
+        opacity: 0;
+    }
+    // hamburger
+    .hamburger {
+      margin-left: auto;
+      grid-column: 3;
+      display: block;
+      cursor: pointer;
+      z-index: 1000;
+
+      .line {
+        width: 25px;
+        height: 2px;
+        margin: 3.6px 0px;
+        background-color: $color-light;
+      transition: transform 0.3s ease-in-out;
+        border-radius: 50px;
+      }
+    }
+    .hamburger.is-active .line:nth-child(1) {
+        transform: rotate(45deg) translateY(-5px);
+      }
+      
+      .hamburger.is-active .line:nth-child(2) {
+        opacity: 0;
+      }
+      
+      .hamburger.is-active .line:nth-child(3) {
+        transform: rotate(-45deg) translateY(5px);
+      }
+
+    .navigation {
+      display: flex;
+      position: absolute;
+      height: 0px;
+      top: 0px;
+      left: 0;
+      right: 0;
+      width: 100vw;
+      background-color: $color-primary;
+      transition: height 0.4s ease-in-out;
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+
+      .ul-tag {
+        display: flex;
+        gap: 2em;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.9s;
+        opacity: 0;
+
+        li {
+          display: inline-block;
+          margin-bottom: -5px;
+          transition: 0.9s;
+          text-align: center;
+          padding: 5px 15px;
+          border-bottom: 2px solid $color-light;
+          border-radius: 8px;
+          transition: border 0.1s ease-in-out;
+        }
+        li:last-child {
+          margin-bottom: 10px;
+        }
+        li:hover {
+          border: 2px solid $color-light;
+          border-radius: 20px;
+        }
+      }
+
+      .link {
+        transition: 1s ease-in-out;
+        color: $color-bg;
+        font-family: $font-mono;
+        font-size: $fs-9;
+        text-transform: uppercase;
+      }
+    }
+    .navigation.active {
+      height: 380px;
+      z-index: 900;
+    }
+    .navigation.active .ul-tag {
+      opacity: 1;
+    }
+  } //nav
+} //mixin

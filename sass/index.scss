@@ -1,0 +1,15 @@
+@import "config";
+@import "utils";
+@import "default";
+@import "navbar";
+
+body{
+    width: 100vw;
+    height: 100dvh;
+    background-color: $color-bg;
+    overflow-y: auto;
+
+    .header{
+        @include navbar; 
+    }
+}
