@@ -3,13 +3,119 @@
 @import "default";
 @import "navbar";
 
-body{
-    width: 100vw;
-    height: 100dvh;
-    background-color: $color-bg;
-    overflow-y: auto;
+body {
+  width: 100vw;
+  height: 100dvh;
+  background-color: $color-bg;
+  overflow-y: auto;
 
-    .header{
-        @include navbar; 
+  .header {
+    @include navbar;
+
+    // hero section
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 15px;
+      height: 100vh;
+
+      .hero-img {
+        width: 60%;
+      }
+
+    //   hero text 
+      .hero-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .hero-h1,
+        .highlighted-text {
+          font-family: $font-major;
+          margin-top: 30px;
+          font-size: 38px;
+          font-weight: 800;
+          text-transform: uppercase;
+          color: $color-primary;
+        }
+        .highlighted-text {
+          color: $color-light;
+        }
+
+        .hero-dis {
+          font-size: 17.5px;
+          font-family: $font-condensed;
+          color: $color-primary;
+          padding: 20px;
+          padding-top: 15px;
+          font-weight: 400;
+        }
+      }
+
+    //   hero-section button
+      .hero-btn {
+        background: $color-primary;
+        padding: 0.35em;
+        padding-left: 1.2em;
+        border-radius: 0.9em;
+        border: none;
+        letter-spacing: 0.05em;
+        display: flex;
+        align-items: center;
+        box-shadow: inset 0 0 1.6em -0.6em #714da6;
+        overflow: hidden;
+        position: relative;
+        height: 1.8em;
+        padding-right: 2em;
+        cursor: pointer;
+
+        .hero-btn-a {
+          color: $color-bg;
+          margin-top: -3px;
+          font-family: $font-mono;
+          text-transform: uppercase;
+          font-size: 15px;
+          font-weight: 700;
+        }
+
+        .icon {
+          background: white;
+          margin-left: 1em;
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 1.1em;
+          width: 1.1em;
+          border-radius: 0.7em;
+          box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+          right: 0.3em;
+          transition: all 0.3s;
+        }
+      }
+
+      .hero-btn:hover .icon {
+        width: calc(100% - 0.6em);
+      }
+
+      .hero-btn .icon svg {
+        width: 0.9em;
+        transition: transform 0.3s;
+        color: #7b52b9;
+      }
+
+      .hero-btn:hover .icon svg {
+        transform: translateX(0.1em);
+      }
+
+      .hero-btn:active .icon {
+        transform: scale(0.95);
+      }
     }
+
+  }
 }

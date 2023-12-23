@@ -1,7 +1,17 @@
 
+// default button styles 
+@mixin default-btn($background){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: $background;
+  border-radius: 17px;
+  transition: 0.3s ease-in-out;
+  padding: 10px;
+}
 
 // utility classes
-
 .row {
   display: flex;
 }
