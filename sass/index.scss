@@ -23,6 +23,7 @@ body {
       padding: 15px;
       height: 100vh;
       width: 100%;
+      margin-top: 30px;
       opacity: 0;
       animation: fadeIn 1s ease-in-out forwards;
 
@@ -168,5 +169,93 @@ body {
         opacity: 1;
       }
     }
-  }
+  } //header ends here 
+
+  .main{
+
+    .features-section{
+      background-color: $color-primary;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 15px;
+      height: 100vh;
+      width: 100vw;
+
+      .features-heading{
+        top: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .features-h1{
+          font-family: $font-condensed;
+          font-size: 35px;
+          padding-bottom: 10px;
+          font-weight: 700;
+          color: $color-bg;
+          text-transform: uppercase;
+        }
+        .features-dis{
+          font-family: $font-condensed;
+          padding: 10px;
+          padding-top: 6px;
+          font-size: 18px;
+          font-weight: 400;
+          color: $color-bg;
+          margin-bottom: 35px;
+        }
+      }
+
+      .features-container{
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .feature{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 150px;
+          padding: 10px;
+          text-align: center;
+
+          .item-h1{
+            color: $color-light;
+            font-size: 17px;
+            font-weight: 700;
+            font-family: $font-condensed;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding-bottom: 8px;
+          }
+          .item-dis{
+            color: $color-bg;
+            font-size: 16px;
+            font-weight: 400;
+            font-family: $font-condensed;
+          }
+          .item-img{
+            width: 55px;
+            padding: 5px;
+            padding-bottom: 7px;
+          }
+          .img-1{
+            width: 62  px;
+          }
+        }
+      }
+    }
+
+  }//main-content ends here
 }

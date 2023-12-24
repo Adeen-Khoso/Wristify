@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-
   // initializing elements
-  const navdiv = document.getElementById("nav");
+  const nav = document.getElementById("nav");
   const navigation = document.getElementById("navigation");
   const hamburger = document.getElementById("hamburger");
   const branding = document.getElementById("branding");
   const navLinks = document.querySelectorAll(".navigation a");
 
+  // hamburger toggle
   hamburger.onclick = function () {
     navigation.classList.toggle("active");
     hamburger.classList.toggle("active");
@@ -20,10 +20,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-
   // numbers counter animation !
-  const targetValues = [5000 , 1500, 25]; 
-  const duration = 2500; 
+  const targetValues = [5000, 1500, 25];
+  const duration = 2500;
 
   const counterElements = document.querySelectorAll(".highlighted-stat");
 
@@ -34,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const now = new Date().getTime();
       const progress = Math.min((now - startTime) / duration, 1);
       const value = Math.floor(progress * (end - start) + start);
-      element.textContent = value + '+';
+      element.textContent = value + "+";
 
       if (now < endTime) {
         requestAnimationFrame(runAnimation);
@@ -43,8 +42,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     runAnimation();
   }
-
   counterElements.forEach((element, index) => {
     animateValue(element, 0, targetValues[index], duration);
   });
+
+
+
 });
+  // navbar after scroll !
+  document.addEventListener("scroll", function () {
+    if (window.scrollY > 1) {
+      nav.classList.add("scrolled");
+    }
+  });
+ 

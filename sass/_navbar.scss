@@ -7,10 +7,12 @@
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
     width: 100%;
-    z-index: 10;
+    z-index: 1000;
     gap: 6em;
     padding: 0.5rem 1rem;
-    background: transparent;
+    background-color: #f0ece5f7;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px; 
 
     // branding
     .branding {
@@ -87,10 +89,11 @@
       left: 0;
       right: 0;
       width: 100vw;
+      z-index: 1100;
       background-color: $color-primary;
       transition: height 0.4s ease-in-out;
       border-bottom-left-radius: 25px;
-      border-bottom-right-radius: 25px;
+      border-bottom-right-radius: 25px; 
 
       .ul-tag {
         display: flex;

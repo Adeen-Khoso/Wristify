@@ -77,10 +77,12 @@ body .header .nav {
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   width: 100%;
-  z-index: 10;
+  z-index: 1000;
   gap: 6em;
   padding: 0.5rem 1rem;
-  background: transparent;
+  background-color: rgba(240, 236, 229, 0.968627451);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
 body .header .nav .branding {
   grid-column: 1;
@@ -148,6 +150,7 @@ body .header .nav .navigation {
   left: 0;
   right: 0;
   width: 100vw;
+  z-index: 1100;
   background-color: #312F4D;
   transition: height 0.4s ease-in-out;
   border-bottom-left-radius: 25px;
@@ -206,6 +209,7 @@ body .header .hero {
   padding: 15px;
   height: 100vh;
   width: 100%;
+  margin-top: 30px;
   opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
 }
@@ -332,6 +336,84 @@ body .header .hero .stats .highlighted-stat {
   to {
     opacity: 1;
   }
+}
+body .main .features-section {
+  background-color: #312F4D;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  height: 100vh;
+  width: 100vw;
+}
+body .main .features-section .features-heading {
+  top: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+body .main .features-section .features-heading .features-h1 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 35px;
+  padding-bottom: 10px;
+  font-weight: 700;
+  color: #F0ECE5;
+  text-transform: uppercase;
+}
+body .main .features-section .features-heading .features-dis {
+  font-family: "Roboto Condensed", sans-serif;
+  padding: 10px;
+  padding-top: 6px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #F0ECE5;
+  margin-bottom: 35px;
+}
+body .main .features-section .features-container {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+body .main .features-section .features-container .feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  padding: 10px;
+  text-align: center;
+}
+body .main .features-section .features-container .feature .item-h1 {
+  color: #626098;
+  font-size: 17px;
+  font-weight: 700;
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-bottom: 8px;
+}
+body .main .features-section .features-container .feature .item-dis {
+  color: #F0ECE5;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Roboto Condensed", sans-serif;
+}
+body .main .features-section .features-container .feature .item-img {
+  width: 55px;
+  padding: 5px;
+  padding-bottom: 7px;
+}
+body .main .features-section .features-container .feature .img-1 {
+  width: 62 px;
 }
 
 /*# sourceMappingURL=index.css.map */
