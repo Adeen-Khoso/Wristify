@@ -70,12 +70,13 @@ body {
   overflow-y: auto;
 }
 body .header .nav {
+  display: grid;
   position: fixed;
   top: 0;
-  display: grid;
+  z-index: 1000;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  max-width: 100%;
+  width: 100%;
   z-index: 10;
   gap: 6em;
   padding: 0.5rem 1rem;
@@ -140,7 +141,8 @@ body .header .nav .hamburger.active .line:nth-child(3) {
 }
 body .header .nav .navigation {
   display: flex;
-  position: absolute;
+  position: fixed;
+  top: 0;
   height: 0px;
   top: 0px;
   left: 0;
@@ -194,20 +196,31 @@ body .header .nav .navigation.active {
 body .header .nav .navigation.active .ul-tag {
   opacity: 1;
 }
-body .header .nav .after-scroll {
-  background-color: #333;
-}
 body .header .hero {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 15px;
   height: 100vh;
+  width: 100%;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
 }
 body .header .hero .hero-img {
   width: 60%;
+  transform: scale(0);
+  animation: scaleIn 1.45s ease-in-out forwards;
+}
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 body .header .hero .hero-text {
   display: flex;
@@ -286,6 +299,39 @@ body .header .hero .hero-btn:hover .icon svg {
 }
 body .header .hero .hero-btn:active .icon {
   transform: scale(0.95);
+}
+body .header .hero .stats {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+body .header .hero .stats .stat,
+body .header .hero .stats .highlighted-stat {
+  width: 70px;
+  margin: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 500;
+  color: #312F4D;
+  font-size: 14px;
+}
+body .header .hero .stats .highlighted-stat {
+  color: #626098;
+  font-weight: 600;
+  font-size: 18px;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

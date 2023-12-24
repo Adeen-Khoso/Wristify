@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+
   // initializing elements
   const navdiv = document.getElementById("nav");
   const navigation = document.getElementById("navigation");
@@ -19,15 +20,31 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  window.addEventListener('scroll', () => {
-    const scrollPosition = window.scrollY;
-    const targetDiv = document.querySelector('#target-div');// need to put the name of the div where the nav will change its color !
-  
-    if (scrollPosition > 50 || targetDiv.getBoundingClientRect().top >= 0) {
-      nav.classList.add("after-scroll");   
-    } else {
-      nav.style.display = 'none';
-    }
-  });
 
+  // numbers counter animation !
+  const targetValues = [5000 , 1500, 25]; 
+  const duration = 2500; 
+
+  const counterElements = document.querySelectorAll(".highlighted-stat");
+
+  function animateValue(element, start, end, duration) {
+    const startTime = new Date().getTime();
+    const endTime = startTime + duration;
+    const runAnimation = () => {
+      const now = new Date().getTime();
+      const progress = Math.min((now - startTime) / duration, 1);
+      const value = Math.floor(progress * (end - start) + start);
+      element.textContent = value + '+';
+
+      if (now < endTime) {
+        requestAnimationFrame(runAnimation);
+      }
+    };
+
+    runAnimation();
+  }
+
+  counterElements.forEach((element, index) => {
+    animateValue(element, 0, targetValues[index], duration);
+  });
 });

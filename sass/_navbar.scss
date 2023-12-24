@@ -1,11 +1,12 @@
 @mixin navbar {
   .nav {
+    display: grid;
     position: fixed;
     top: 0;
-    display: grid;
+    z-index: 1000;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    max-width: 100%;
+    width: 100%;
     z-index: 10;
     gap: 6em;
     padding: 0.5rem 1rem;
@@ -79,7 +80,8 @@
     // navigation bar for cta's
     .navigation {
       display: flex;
-      position: absolute;
+      position: fixed;
+      top: 0;
       height: 0px;
       top: 0px;
       left: 0;
@@ -130,6 +132,7 @@
       }
     }
     .navigation.active {
+
       height: 380px;
       z-index: 900;
     }
@@ -138,9 +141,4 @@
     }
   } //nav
 
-
-  .nav .after-scroll{
-    background-color: #333;
-  }
-  
 } //mixin

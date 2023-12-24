@@ -16,17 +16,31 @@ body {
     .hero {
       display: flex;
       flex-direction: column;
+      overflow: hidden;
       justify-content: center;
       align-items: center;
       text-align: center;
       padding: 15px;
       height: 100vh;
+      width: 100%;
+      opacity: 0;
+      animation: fadeIn 1s ease-in-out forwards;
 
       .hero-img {
         width: 60%;
+        transform: scale(0);
+        animation: scaleIn 1.45s ease-in-out forwards;
+      }
+      @keyframes scaleIn {
+        from {
+          transform: scale(0.8);
+        }
+        to {
+          transform: scale(1);
+        }
       }
 
-    //   hero text 
+      //   hero text
       .hero-text {
         display: flex;
         flex-direction: column;
@@ -56,7 +70,7 @@ body {
         }
       }
 
-    //   hero-section button
+      //   hero-section button
       .hero-btn {
         background: $color-primary;
         padding: 0.35em;
@@ -115,7 +129,44 @@ body {
       .hero-btn:active .icon {
         transform: scale(0.95);
       }
+
+      // stats
+      .stats {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+
+        .stat,
+        .highlighted-stat {
+          width: 70px;
+          margin: 10px;
+          text-align: center;
+          text-transform: uppercase;
+          font-family: $font-condensed;
+          font-weight: 500;
+          color: $color-primary;
+          font-size: 14px;
+        }
+        .highlighted-stat {
+          color: $color-light;
+          font-weight: 600;
+          font-size: 18px;
+        }
+      }
     }
 
+    // hero section animations
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
   }
 }
