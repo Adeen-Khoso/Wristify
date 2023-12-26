@@ -286,6 +286,85 @@ body {
 
     } //features section ends here 
 
+    // about section starts here
+    .about-section{
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 15px;
+      height: 90vh;
+      width: 100vw;
+      padding: 20px;
 
+      .about-h1{
+        margin-top: -30px;
+        font-size: 40px;
+        font-family: $font-major;
+        color: $color-primary;
+        font-weight: 900;
+        text-transform: uppercase;
+        padding: 20px;
+      }
+      
+      .about-img {
+        width: 200px;
+        transform: scale(0);
+        animation: scaleIn 1.45s ease-in-out forwards;
+      }
+      @keyframes scaleIn {
+        from {
+          transform: scale(0.5);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+
+      .about-dis{
+        font-size: 18px;
+        font-weight: 400;
+        font-family: $font-condensed;
+        color: $color-primary;
+        padding: 20px;
+      }
+
+      // about section btn stylings
+      .about-section-btn {
+        margin: 20px;
+        font-size: 15px;
+        padding: 8px 28px;
+        border: none;
+        outline: none;
+        border-radius: 32px;
+        cursor: pointer;
+        text-transform: uppercase;
+        background-color: $color-primary;
+        color: $color-bg;
+        font-weight: 700;
+        transition: 0.6s;
+        box-shadow: 0px 0px 60px #1f4c65;
+        -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+        opacity: 0;
+        filter: blur(5px);
+        transform: translateY(100%);
+        transition: all 0.8s ease-in-out;
+      }
+      .about-section-btn:active {
+        scale: 0.92;
+      }
+      .about-section-btn:hover {
+        background: rgb(2,29,78);
+        background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%);
+        color: rgb(4, 4, 38);
+      }
+      .btn-animation{
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+      }
+    }
   }//main-content ends here
 }
