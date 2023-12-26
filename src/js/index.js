@@ -1,10 +1,11 @@
-document.addEventListener("DOMContentLoaded", function () {
+
   // initializing elements
   const nav = document.getElementById("nav");
   const navigation = document.getElementById("navigation");
   const hamburger = document.getElementById("hamburger");
   const branding = document.getElementById("branding");
   const navLinks = document.querySelectorAll(".navigation a");
+
 
   // hamburger toggle
   hamburger.onclick = function () {
@@ -13,17 +14,18 @@ document.addEventListener("DOMContentLoaded", function () {
     branding.classList.toggle("active");
   };
 
+  // closing nav after clicked on link
   navLinks.forEach(function (link) {
     link.addEventListener("click", function () {
       navigation.classList.remove("active");
       branding.classList.remove("active");
+      hamburger.classList.remove("active");
     });
   });
 
   // numbers counter animation !
   const targetValues = [5000, 1500, 25];
   const duration = 2500;
-
   const counterElements = document.querySelectorAll(".highlighted-stat");
 
   function animateValue(element, start, end, duration) {
@@ -39,7 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
         requestAnimationFrame(runAnimation);
       }
     };
-
     runAnimation();
   }
   counterElements.forEach((element, index) => {
@@ -48,11 +49,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-});
-  // navbar after scroll !
-  document.addEventListener("scroll", function () {
-    if (window.scrollY > 1) {
-      nav.classList.add("scrolled");
-    }
+  // intersection observer api for animation events
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach((entry) => {
+      console.log(entry);
+      if (entry.isIntersecting){
+        const animationClass = entry.target.classList.contains('feature')
+        ? 'feature-animate'
+        : 'animate';  
+        entry.target.classList.add(animationClass)
+      }else{
+        entry.target.classList.remove('animate','feature-animate');
+      }
+    });
   });
- 
+
+// for animations
+  const hiddenElements = document.querySelectorAll(".hidden")
+  hiddenElements.forEach((el)=> observer.observe(el));
+  
+  // for specifically features
+  const feature = document.querySelectorAll('.feature');
+  feature.forEach((el)=> observer.observe(el));
+

@@ -1,7 +1,19 @@
+// importing 
 @import "config";
-@import "utils";
 @import "default";
 @import "navbar";
+
+// utility classes
+.hidden{
+  opacity: 0;
+  transition:opacity 0.7s ease-in;
+  filter: blur(3px);
+}
+.animate{
+  opacity: 1;
+  filter: blur(0);
+}
+
 
 body {
   width: 100vw;
@@ -22,19 +34,17 @@ body {
       text-align: center;
       padding: 15px;
       height: 100vh;
-      width: 100%;
-      margin-top: 30px;
-      opacity: 0;
-      animation: fadeIn 1s ease-in-out forwards;
+      width: 100vw;
+      margin-top: 20px;
 
       .hero-img {
-        width: 60%;
+        width: 200px;
         transform: scale(0);
         animation: scaleIn 1.45s ease-in-out forwards;
       }
       @keyframes scaleIn {
         from {
-          transform: scale(0.8);
+          transform: scale(0.5);
         }
         to {
           transform: scale(1);
@@ -159,20 +169,12 @@ body {
         }
       }
     }
-
-    // hero section animations
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
   } //header ends here 
 
+  // main page content starts here
   .main{
 
+    // features section starts her
     .features-section{
       background-color: $color-primary;
       display: flex;
@@ -204,10 +206,11 @@ body {
           font-family: $font-condensed;
           padding: 10px;
           padding-top: 6px;
-          font-size: 18px;
+          font-size: 17.5px;
           font-weight: 400;
           color: $color-bg;
           margin-bottom: 35px;
+          text-transform: capitalize;
         }
       }
 
@@ -229,6 +232,10 @@ body {
           width: 150px;
           padding: 10px;
           text-align: center;
+          opacity: 0;
+          filter: blur(5px);
+          transform: translateX(-100%);
+          transition: all 1s;
 
           .item-h1{
             color: $color-light;
@@ -251,11 +258,34 @@ body {
             padding-bottom: 7px;
           }
           .img-1{
-            width: 62  px;
+            width: 55px;
+            padding-bottom: 15px;
           }
         }
+        .feature-animate{
+          opacity: 1;
+          filter: blur(0);
+          transform: translateX(0);
+        }
+        .feature:nth-child(2){
+          transition-delay: 100ms;
+        }
+        .feature:nth-child(3){
+          transition-delay: 200ms;
+        }
+        .feature:nth-child(4){
+          transition-delay: 300ms;
+        }
+        .feature:nth-child(5){
+          transition-delay: 400ms;
+        }
+        .feature:nth-child(6){
+          transition-delay: 500ms;
+        }
       }
-    }
+
+    } //features section ends here 
+
 
   }//main-content ends here
 }
