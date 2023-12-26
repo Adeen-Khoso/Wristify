@@ -38,7 +38,7 @@
           <ul class="ul-tag">
             <li><a href="#header" class="link">Home</a></li>
             <li><a href="#" class="link">About</a></li>
-            <li><a href="#" class="link">Reviews</a></li>
+            <li><a href="#review-section" class="link">Reviews</a></li>
             <li><a href="#features-section" class="link">Features</a></li>
           </ul>
         </div>
@@ -99,54 +99,182 @@
     <!-- header ends here -->
 
     <main class="main hidden" id="main">
-
       <!-- wave -->
-     <svg id="wave-1" class="wave-1  " style="transform:rotate(0deg);  margin-bottom:-2px;" viewBox="0 0 1440 330" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(49, 47, 77, 1)" offset="0%"></stop><stop stop-color="rgba(49, 47, 77, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,66L48,93.5C96,121,192,176,288,165C384,154,480,77,576,71.5C672,66,768,132,864,181.5C960,231,1056,264,1152,242C1248,220,1344,143,1440,110C1536,77,1632,88,1728,93.5C1824,99,1920,99,2016,93.5C2112,88,2208,77,2304,88C2400,99,2496,132,2592,159.5C2688,187,2784,209,2880,192.5C2976,176,3072,121,3168,115.5C3264,110,3360,154,3456,187C3552,220,3648,242,3744,258.5C3840,275,3936,286,4032,247.5C4128,209,4224,121,4320,110C4416,99,4512,165,4608,192.5C4704,220,4800,209,4896,220C4992,231,5088,264,5184,253C5280,242,5376,187,5472,154C5568,121,5664,110,5760,132C5856,154,5952,209,6048,236.5C6144,264,6240,264,6336,269.5C6432,275,6528,286,6624,264C6720,242,6816,187,6864,159.5L6912,132L6912,330L6864,330C6816,330,6720,330,6624,330C6528,330,6432,330,6336,330C6240,330,6144,330,6048,330C5952,330,5856,330,5760,330C5664,330,5568,330,5472,330C5376,330,5280,330,5184,330C5088,330,4992,330,4896,330C4800,330,4704,330,4608,330C4512,330,4416,330,4320,330C4224,330,4128,330,4032,330C3936,330,3840,330,3744,330C3648,330,3552,330,3456,330C3360,330,3264,330,3168,330C3072,330,2976,330,2880,330C2784,330,2688,330,2592,330C2496,330,2400,330,2304,330C2208,330,2112,330,2016,330C1920,330,1824,330,1728,330C1632,330,1536,330,1440,330C1344,330,1248,330,1152,330C1056,330,960,330,864,330C768,330,672,330,576,330C480,330,384,330,288,330C192,330,96,330,48,330L0,330Z"></path></svg>
+      <svg
+        id="wave-1"
+        class="wave-1"
+        style="transform: rotate(0deg); margin-bottom: -2px"
+        viewBox="0 0 1440 330"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+            <stop stop-color="rgba(49, 47, 77, 1)" offset="0%"></stop>
+            <stop stop-color="rgba(49, 47, 77, 1)" offset="100%"></stop>
+          </linearGradient>
+        </defs>
+        <path
+          style="transform: translate(0, 0px); opacity: 1"
+          fill="url(#sw-gradient-0)"
+          d="M0,66L48,93.5C96,121,192,176,288,165C384,154,480,77,576,71.5C672,66,768,132,864,181.5C960,231,1056,264,1152,242C1248,220,1344,143,1440,110C1536,77,1632,88,1728,93.5C1824,99,1920,99,2016,93.5C2112,88,2208,77,2304,88C2400,99,2496,132,2592,159.5C2688,187,2784,209,2880,192.5C2976,176,3072,121,3168,115.5C3264,110,3360,154,3456,187C3552,220,3648,242,3744,258.5C3840,275,3936,286,4032,247.5C4128,209,4224,121,4320,110C4416,99,4512,165,4608,192.5C4704,220,4800,209,4896,220C4992,231,5088,264,5184,253C5280,242,5376,187,5472,154C5568,121,5664,110,5760,132C5856,154,5952,209,6048,236.5C6144,264,6240,264,6336,269.5C6432,275,6528,286,6624,264C6720,242,6816,187,6864,159.5L6912,132L6912,330L6864,330C6816,330,6720,330,6624,330C6528,330,6432,330,6336,330C6240,330,6144,330,6048,330C5952,330,5856,330,5760,330C5664,330,5568,330,5472,330C5376,330,5280,330,5184,330C5088,330,4992,330,4896,330C4800,330,4704,330,4608,330C4512,330,4416,330,4320,330C4224,330,4128,330,4032,330C3936,330,3840,330,3744,330C3648,330,3552,330,3456,330C3360,330,3264,330,3168,330C3072,330,2976,330,2880,330C2784,330,2688,330,2592,330C2496,330,2400,330,2304,330C2208,330,2112,330,2016,330C1920,330,1824,330,1728,330C1632,330,1536,330,1440,330C1344,330,1248,330,1152,330C1056,330,960,330,864,330C768,330,672,330,576,330C480,330,384,330,288,330C192,330,96,330,48,330L0,330Z"
+        ></path>
+      </svg>
       <!-- features section -->
-      <div class="features-section " id="features-section">
-
+      <div class="features-section" id="features-section">
         <div class="features-heading">
           <h1 class="features-h1">features</h1>
           <p class="features-dis">
-            Discover the innovation with our Watches which contain an array of adorable Features
+            Discover the innovation with our Watches which contain an array of
+            adorable Features
           </p>
         </div>
 
         <div class="features-container">
-          <div class="feature"> <img src="assets/leaf (1).png" alt="" class="item-img"> <h1 class="item-h1">eco friendly</h1> <p class="item-dis">Designed with eco friendly materials</p></div>
-          <div class="feature"> <img src="assets/custom.png" alt="" class="item-img img-1"> <h1 class="item-h1">customization</h1> <p class="item-dis">Choose from variety of designs</p></div>
-          <div class="feature"> <img src="assets/battery.png" alt="" class="item-img"> <h1 class="item-h1">battery life</h1> <p class="item-dis">Best Battery life at your service</p></div>
-          <div class="feature"> <img src="assets/project-management.png" alt="" class="item-img"> <h1 class="item-h1">power</h1> <p class="item-dis">Best CPU with high efficiencey</p></div>
-          <div class="feature"> <img src="assets/tap.png" alt="" class="item-img"> <h1 class="item-h1">best touch</h1> <p class="item-dis">Vibrant screen with 90hz refresh rate</p></div>
-          <div class="feature"> <img src="assets/link.png" alt="" class="item-img"> <h1 class="item-h1">connectivity</h1> <p class="item-dis">Best signals everywhere</p></div>
+          <div class="feature">
+            <img src="assets/leaf (1).png" alt="" class="item-img" />
+            <h1 class="item-h1">eco friendly</h1>
+            <p class="item-dis">Designed with eco friendly materials</p>
+          </div>
+          <div class="feature">
+            <img src="assets/custom.png" alt="" class="item-img img-1" />
+            <h1 class="item-h1">customization</h1>
+            <p class="item-dis">Choose from variety of designs</p>
+          </div>
+          <div class="feature">
+            <img src="assets/battery.png" alt="" class="item-img" />
+            <h1 class="item-h1">battery life</h1>
+            <p class="item-dis">Best Battery life at your service</p>
+          </div>
+          <div class="feature">
+            <img src="assets/project-management.png" alt="" class="item-img" />
+            <h1 class="item-h1">power</h1>
+            <p class="item-dis">Best CPU with high efficiencey</p>
+          </div>
+          <div class="feature">
+            <img src="assets/tap.png" alt="" class="item-img" />
+            <h1 class="item-h1">best touch</h1>
+            <p class="item-dis">Vibrant screen with 90hz refresh rate</p>
+          </div>
+          <div class="feature">
+            <img src="assets/link.png" alt="" class="item-img" />
+            <h1 class="item-h1">connectivity</h1>
+            <p class="item-dis">Best signals everywhere</p>
+          </div>
         </div>
-
       </div>
       <!-- features section ends here -->
-     <svg id="wave-1" class="wave-1  " style="transform:rotate(180deg);  margin-top:-2px;" viewBox="0 0 1440 330" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(49, 47, 77, 1)" offset="0%"></stop><stop stop-color="rgba(49, 47, 77, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,66L48,93.5C96,121,192,176,288,165C384,154,480,77,576,71.5C672,66,768,132,864,181.5C960,231,1056,264,1152,242C1248,220,1344,143,1440,110C1536,77,1632,88,1728,93.5C1824,99,1920,99,2016,93.5C2112,88,2208,77,2304,88C2400,99,2496,132,2592,159.5C2688,187,2784,209,2880,192.5C2976,176,3072,121,3168,115.5C3264,110,3360,154,3456,187C3552,220,3648,242,3744,258.5C3840,275,3936,286,4032,247.5C4128,209,4224,121,4320,110C4416,99,4512,165,4608,192.5C4704,220,4800,209,4896,220C4992,231,5088,264,5184,253C5280,242,5376,187,5472,154C5568,121,5664,110,5760,132C5856,154,5952,209,6048,236.5C6144,264,6240,264,6336,269.5C6432,275,6528,286,6624,264C6720,242,6816,187,6864,159.5L6912,132L6912,330L6864,330C6816,330,6720,330,6624,330C6528,330,6432,330,6336,330C6240,330,6144,330,6048,330C5952,330,5856,330,5760,330C5664,330,5568,330,5472,330C5376,330,5280,330,5184,330C5088,330,4992,330,4896,330C4800,330,4704,330,4608,330C4512,330,4416,330,4320,330C4224,330,4128,330,4032,330C3936,330,3840,330,3744,330C3648,330,3552,330,3456,330C3360,330,3264,330,3168,330C3072,330,2976,330,2880,330C2784,330,2688,330,2592,330C2496,330,2400,330,2304,330C2208,330,2112,330,2016,330C1920,330,1824,330,1728,330C1632,330,1536,330,1440,330C1344,330,1248,330,1152,330C1056,330,960,330,864,330C768,330,672,330,576,330C480,330,384,330,288,330C192,330,96,330,48,330L0,330Z"></path></svg>
+      <svg
+        id="wave-1"
+        class="wave-1"
+        style="transform: rotate(180deg); margin-top: -2px"
+        viewBox="0 0 1440 330"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+            <stop stop-color="rgba(49, 47, 77, 1)" offset="0%"></stop>
+            <stop stop-color="rgba(49, 47, 77, 1)" offset="100%"></stop>
+          </linearGradient>
+        </defs>
+        <path
+          style="transform: translate(0, 0px); opacity: 1"
+          fill="url(#sw-gradient-0)"
+          d="M0,66L48,93.5C96,121,192,176,288,165C384,154,480,77,576,71.5C672,66,768,132,864,181.5C960,231,1056,264,1152,242C1248,220,1344,143,1440,110C1536,77,1632,88,1728,93.5C1824,99,1920,99,2016,93.5C2112,88,2208,77,2304,88C2400,99,2496,132,2592,159.5C2688,187,2784,209,2880,192.5C2976,176,3072,121,3168,115.5C3264,110,3360,154,3456,187C3552,220,3648,242,3744,258.5C3840,275,3936,286,4032,247.5C4128,209,4224,121,4320,110C4416,99,4512,165,4608,192.5C4704,220,4800,209,4896,220C4992,231,5088,264,5184,253C5280,242,5376,187,5472,154C5568,121,5664,110,5760,132C5856,154,5952,209,6048,236.5C6144,264,6240,264,6336,269.5C6432,275,6528,286,6624,264C6720,242,6816,187,6864,159.5L6912,132L6912,330L6864,330C6816,330,6720,330,6624,330C6528,330,6432,330,6336,330C6240,330,6144,330,6048,330C5952,330,5856,330,5760,330C5664,330,5568,330,5472,330C5376,330,5280,330,5184,330C5088,330,4992,330,4896,330C4800,330,4704,330,4608,330C4512,330,4416,330,4320,330C4224,330,4128,330,4032,330C3936,330,3840,330,3744,330C3648,330,3552,330,3456,330C3360,330,3264,330,3168,330C3072,330,2976,330,2880,330C2784,330,2688,330,2592,330C2496,330,2400,330,2304,330C2208,330,2112,330,2016,330C1920,330,1824,330,1728,330C1632,330,1536,330,1440,330C1344,330,1248,330,1152,330C1056,330,960,330,864,330C768,330,672,330,576,330C480,330,384,330,288,330C192,330,96,330,48,330L0,330Z"
+        ></path>
+      </svg>
 
       <!-- about section starts here -->
       <div class="about-section hidden">
-
-        <h1 class="about-h1">
-          about us
-        </h1>
+        <h1 class="about-h1">about us</h1>
 
         <div class="about-img hidden">
-          <img src="assets/about-img.png" alt="img">
+          <img src="assets/about-img.png" alt="img" />
         </div>
 
         <p class="about-dis">
-          Meet the future on your wrist, Our Smartwatch is not just a timepiece, it's your personal gateway to a world of convenience .
+          Meet the future on your wrist, Our Smartwatch is not just a timepiece,
+          it's your personal gateway to a world of convenience .
         </p>
 
         <button class="about-section-btn btn" id="about-section-btn">
           Explore
         </button>
-                
       </div>
       <!-- about section ends here -->
 
+      <!-- reviews section starts here -->
+      <div class="review-section hidden" id="review-section">
+
+        <h1 class="review-heading">Reviews</h1>
+
+        <!-- review slider -->
+        <div class="wrapper">
+          <div class="review-slider">
+
+            <!-- review card -->
+            <div class="review-card">
+              <div class="reviewer-img">
+                <img src="assets/demo human.jpg" alt="img" />
+              </div>
+              <div class="review-text">
+                <h1 class="review-h1">Alex Michael</h1>
+                <p class="review-dis">
+                  “ The quality is amazing , great experience with Wristify. ”
+                </p>
+              </div>
+              <div class="stars">
+                <div class="star"><img src="assets/star.png" alt="" /></div>
+                <div class="star"><img src="assets/star.png" alt="" /></div>
+                <div class="star"><img src="assets/star.png" alt="" /></div>
+                <div class="star"><img src="assets/star.png" alt="" /></div>
+                <div class="star"><img src="assets/star.png" alt="" /></div>
+              </div>
+            </div>
+
+            <div class="review-card">
+              <div class="reviewer-img">
+                <img src="assets/demo-human2.jpg" alt="img" />
+              </div>
+              <div class="review-text">
+                <h1 class="review-h1">Ricardo James</h1>
+                <p class="review-dis">
+                  “ Wristify isn't just a watch, it's an extension of my lifestyle...”
+                </p>
+              </div>
+              <div class="stars">
+                <div class="star"><img src="assets/star.png" alt="" /></div>
+                <div class="star"><img src="assets/star.png" alt="" /></div>
+                <div class="star"><img src="assets/star.png" alt="" /></div>
+                <div class="star"><img src="assets/star.png" alt="" /></div>
+                <div class="star"><img src="assets/star.png" alt="" /></div>
+              </div>
+            </div>
+
+            <div class="review-card">
+              <div class="reviewer-img">
+                <img src="assets/demo-human3.jpg" alt="img" />
+              </div>
+              <div class="review-text">
+                <h1 class="review-h1">Nathan Felix</h1>
+                <p class="review-dis">
+                  “ Never miss a workout or a diet again! Thanks to Wristify. ”
+                </p>
+              </div>
+              <div class="stars">
+                <div class="star"><img src="assets/star.png" alt="" /></div>
+                <div class="star"><img src="assets/star.png" alt="" /></div>
+                <div class="star"><img src="assets/star.png" alt="" /></div>
+                <div class="star"><img src="assets/star.png" alt="" /></div>
+                <div class="star"><img src="assets/star.png" alt="" /></div>
+              </div>
+            </div>
+
+            </div>
+          </div>
+
+      </div>
     </main>
   </body>
 </html>

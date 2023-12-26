@@ -1,19 +1,18 @@
-// importing 
+// importing
 @import "config";
 @import "default";
 @import "navbar";
 
 // utility classes
-.hidden{
+.hidden {
   opacity: 0;
-  transition:opacity 0.7s ease-in;
+  transition: opacity 0.7s ease-in;
   filter: blur(3px);
 }
-.animate{
+.animate {
   opacity: 1;
   filter: blur(0);
 }
-
 
 body {
   width: 100vw;
@@ -169,13 +168,12 @@ body {
         }
       }
     }
-  } //header ends here 
+  } //header ends here
 
   // main page content starts here
-  .main{
-
+  .main {
     // features section starts her
-    .features-section{
+    .features-section {
       background-color: $color-primary;
       display: flex;
       flex-direction: column;
@@ -187,14 +185,14 @@ body {
       height: 100vh;
       width: 100vw;
 
-      .features-heading{
+      .features-heading {
         top: 2;
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
 
-        .features-h1{
+        .features-h1 {
           font-family: $font-condensed;
           font-size: 35px;
           padding-bottom: 10px;
@@ -202,7 +200,7 @@ body {
           color: $color-bg;
           text-transform: uppercase;
         }
-        .features-dis{
+        .features-dis {
           font-family: $font-condensed;
           padding: 10px;
           padding-top: 6px;
@@ -214,7 +212,7 @@ body {
         }
       }
 
-      .features-container{
+      .features-container {
         padding: 10px;
         display: flex;
         flex-direction: row;
@@ -224,7 +222,7 @@ body {
         flex-wrap: wrap;
         gap: 10px;
 
-        .feature{
+        .feature {
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -237,7 +235,7 @@ body {
           transform: translateX(-100%);
           transition: all 1s;
 
-          .item-h1{
+          .item-h1 {
             color: $color-light;
             font-size: 17px;
             font-weight: 700;
@@ -246,48 +244,47 @@ body {
             letter-spacing: 1px;
             padding-bottom: 8px;
           }
-          .item-dis{
+          .item-dis {
             color: $color-bg;
             font-size: 16px;
             font-weight: 400;
             font-family: $font-condensed;
           }
-          .item-img{
+          .item-img {
             width: 55px;
             padding: 5px;
             padding-bottom: 7px;
           }
-          .img-1{
+          .img-1 {
             width: 55px;
             padding-bottom: 15px;
           }
         }
-        .feature-animate{
+        .feature-animate {
           opacity: 1;
           filter: blur(0);
           transform: translateX(0);
         }
-        .feature:nth-child(2){
+        .feature:nth-child(2) {
           transition-delay: 100ms;
         }
-        .feature:nth-child(3){
+        .feature:nth-child(3) {
           transition-delay: 200ms;
         }
-        .feature:nth-child(4){
+        .feature:nth-child(4) {
           transition-delay: 300ms;
         }
-        .feature:nth-child(5){
+        .feature:nth-child(5) {
           transition-delay: 400ms;
         }
-        .feature:nth-child(6){
+        .feature:nth-child(6) {
           transition-delay: 500ms;
         }
       }
-
-    } //features section ends here 
+    } //features section ends here
 
     // about section starts here
-    .about-section{
+    .about-section {
       display: flex;
       flex-direction: column;
       overflow: hidden;
@@ -299,7 +296,7 @@ body {
       width: 100vw;
       padding: 20px;
 
-      .about-h1{
+      .about-h1 {
         margin-top: -30px;
         font-size: 40px;
         font-family: $font-major;
@@ -308,7 +305,7 @@ body {
         text-transform: uppercase;
         padding: 20px;
       }
-      
+
       .about-img {
         width: 200px;
         transform: scale(0);
@@ -323,7 +320,7 @@ body {
         }
       }
 
-      .about-dis{
+      .about-dis {
         font-size: 18px;
         font-weight: 400;
         font-family: $font-condensed;
@@ -346,7 +343,8 @@ body {
         font-weight: 700;
         transition: 0.6s;
         box-shadow: 0px 0px 60px #1f4c65;
-        -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+        -webkit-box-reflect: below 10px
+          linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
         opacity: 0;
         filter: blur(5px);
         transform: translateY(100%);
@@ -356,15 +354,120 @@ body {
         scale: 0.92;
       }
       .about-section-btn:hover {
-        background: rgb(2,29,78);
-        background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%);
+        background: rgb(2, 29, 78);
+        background: linear-gradient(
+          270deg,
+          rgba(2, 29, 78, 0.681) 0%,
+          rgba(31, 215, 232, 0.873) 60%
+        );
         color: rgb(4, 4, 38);
       }
-      .btn-animation{
+      .btn-animation {
         opacity: 1;
         filter: blur(0);
         transform: translateY(0);
       }
     }
-  }//main-content ends here
+    // about section ends here
+
+    // review section starts here
+    .review-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 15px;
+      height: 60vh;
+      width: 100vw;
+      padding: 20px;
+      background-color: $color-primary;
+
+      .review-heading {
+        font-size: 40px;
+        font-family: $font-major;
+        color: $color-primary;
+        font-weight: 900;
+        text-transform: uppercase;
+        padding: 20px;
+        color: $color-bg;
+      }
+
+      .wrapper{
+        width: 100%;
+        overflow-x: auto;
+      }
+      .review-slider {
+        overflow-y: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        scroll-snap-type: x mandatory;
+        overflow-x: auto;
+        scroll-behavior: auto;
+        overscroll-behavior-x:contain ;
+
+        .review-card {
+          flex-shrink:0;
+          scroll-snap-align:start ;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          background-color: $color-bg;
+          width: 250px;
+          height: 206px;
+          padding: 15px;
+          padding-top: 20px;
+          padding-bottom: 20px;
+          border: none;
+          border-radius: 32px;
+          margin: 20px;
+
+          .reviewer-img {
+            width: 45px;
+            height: 45px;
+            margin: 5px;
+            border-radius: 180px;
+          }
+
+          .review-text {
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            .review-h1 {
+              padding: 5px;
+              padding-bottom: 10px;
+              font-size: 18px;
+              color: $color-primary;
+              font-family: $font-condensed;
+              font-weight: 700;
+            }
+            .review-dis {
+              font-size: 16px;
+              color: $color-primary;
+              font-family: $font-condensed;
+              font-weight: 400;
+            }
+          }
+          .stars {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            .star {
+              width: 18px;
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+    }
+  } //main-content ends here
 }

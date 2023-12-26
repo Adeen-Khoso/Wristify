@@ -507,5 +507,96 @@ body .main .about-section .btn-animation {
   filter: blur(0);
   transform: translateY(0);
 }
+body .main .review-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  height: 60vh;
+  width: 100vw;
+  padding: 20px;
+  background-color: #312F4D;
+}
+body .main .review-section .review-heading {
+  font-size: 40px;
+  font-family: "Roboto", sans-serif;
+  color: #312F4D;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 20px;
+  color: #F0ECE5;
+}
+body .main .review-section .wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+body .main .review-section .review-slider {
+  overflow-y: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  scroll-behavior: auto;
+  overscroll-behavior-x: contain;
+}
+body .main .review-section .review-slider .review-card {
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #F0ECE5;
+  width: 250px;
+  height: 206px;
+  padding: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: none;
+  border-radius: 32px;
+  margin: 20px;
+}
+body .main .review-section .review-slider .review-card .reviewer-img {
+  width: 45px;
+  height: 45px;
+  margin: 5px;
+  border-radius: 180px;
+}
+body .main .review-section .review-slider .review-card .review-text {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+body .main .review-section .review-slider .review-card .review-text .review-h1 {
+  padding: 5px;
+  padding-bottom: 10px;
+  font-size: 18px;
+  color: #312F4D;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+}
+body .main .review-section .review-slider .review-card .review-text .review-dis {
+  font-size: 16px;
+  color: #312F4D;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 400;
+}
+body .main .review-section .review-slider .review-card .stars {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+body .main .review-section .review-slider .review-card .stars .star {
+  width: 18px;
+  margin-right: 5px;
+}
 
 /*# sourceMappingURL=index.css.map */
