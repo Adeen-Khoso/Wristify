@@ -82,7 +82,7 @@ body .header .nav {
   z-index: 1000;
   gap: 6em;
   padding: 0.5rem 1rem;
-  background-color: rgba(240, 236, 229, 0.968627451);
+  background-color: rgba(240, 236, 229, 0.8196078431);
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
 }
@@ -597,6 +597,172 @@ body .main .review-section .review-slider .review-card .stars {
 body .main .review-section .review-slider .review-card .stars .star {
   width: 18px;
   margin-right: 5px;
+}
+body .main .sale-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  height: 50vh;
+  width: 100vw;
+  padding: 20px;
+  background-color: #F0ECE5;
+}
+body .main .sale-banner .sale-h1 {
+  color: #312F4D;
+  font-size: 32px;
+  font-weight: 400;
+  padding: 15px;
+  font-family: "Righteous", sans-serif;
+}
+body .main .sale-banner .sale-dis {
+  color: #626098;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 15px;
+  padding-top: 0px;
+  font-family: "Righteous", sans-serif;
+}
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+body .main .sale-banner .sale-percent {
+  animation: pulse 1.3s infinite;
+  font-size: 50px;
+  font-weight: 400;
+  color: #626098;
+  font-family: "Righteous", sans-serif;
+}
+body .main .sale-banner .sale-btn {
+  background: #312F4D;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+  height: 1.8em;
+  padding-right: 1.2em;
+  cursor: pointer;
+  margin-top: 20px;
+}
+body .main .sale-banner .sale-btn-a {
+  color: #F0ECE5;
+  margin-top: -3px;
+  font-family: "Roboto Mono", monospace;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 700;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+body .main .sale-banner .sale-disclaimer {
+  animation: slide 2.7s infinite linear;
+  color: rgba(49, 47, 77, 0.51);
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 30px;
+}
+body .footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  height: 50vh;
+  width: 100vw;
+  background-color: #312F4D;
+}
+body .footer .footer-heading {
+  color: rgba(98, 96, 152, 0.89);
+  font-family: "Righteous", sans-serif;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: normal;
+  padding: 15px;
+  letter-spacing: 2px;
+}
+body .footer .footer-social-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+body .footer .footer-social-links .social-link {
+  width: 27px;
+  margin: 6px;
+  border-radius: 180px;
+}
+body .footer .loader {
+  display: block;
+  --height-of-loader: 2px;
+  width: 85%;
+  height: var(--height-of-loader);
+  border-radius: 30px;
+  background-color: #626098;
+  position: relative;
+}
+body .footer .page-links {
+  display: flex;
+  flex-direction: row;
+  text-transform: uppercase;
+}
+body .footer .page-links .page-link {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 15.5px;
+  font-weight: 500;
+  color: #F0ECE5;
+  margin: 5px;
+}
+body .footer .footer-essentials {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+body .footer .footer-essentials .essential {
+  color: rgba(255, 255, 255, 0.67);
+  font-size: 14.5px;
+  font-weight: 500;
+  padding: 10px;
+  padding-bottom: 6px;
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+}
+body .footer .copyright {
+  margin-top: auto;
+}
+body .footer .copyright .copyright-text {
+  color: rgba(255, 255, 255, 0.63);
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=index.css.map */

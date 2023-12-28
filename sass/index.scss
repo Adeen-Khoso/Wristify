@@ -2,6 +2,7 @@
 @import "config";
 @import "default";
 @import "navbar";
+@import "footer";
 
 // utility classes
 .hidden {
@@ -393,7 +394,7 @@ body {
         color: $color-bg;
       }
 
-      .wrapper{
+      .wrapper {
         width: 100%;
         overflow-x: auto;
       }
@@ -405,11 +406,11 @@ body {
         scroll-snap-type: x mandatory;
         overflow-x: auto;
         scroll-behavior: auto;
-        overscroll-behavior-x:contain ;
+        overscroll-behavior-x: contain;
 
         .review-card {
-          flex-shrink:0;
-          scroll-snap-align:start ;
+          flex-shrink: 0;
+          scroll-snap-align: start;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -469,5 +470,99 @@ body {
         }
       }
     }
+    // review section ends here
+
+    // sale banner
+    .sale-banner {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      text-align: center;
+      padding: 15px;
+      height: 50vh;
+      width: 100vw;
+      padding: 20px;
+      background-color: $color-bg;
+
+      .sale-h1 {
+        color: $color-primary;
+        font-size: 32px;
+        font-weight: 400;
+        padding: 15px;
+        font-family: $font-stylish;
+      }
+      .sale-dis {
+        color: $color-light;
+        font-size: 13px;
+        font-weight: 400;
+        padding: 15px;
+        padding-top: 0px;
+        font-family: $font-stylish;
+      }
+      // for pulse animation
+      @keyframes pulse {
+        0%, 100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+      }
+      .sale-percent {
+        animation: pulse 1.3s infinite;
+        font-size: 50px;
+        font-weight: 400;
+        color: $color-light;
+        font-family: $font-stylish;
+      }
+      .sale-btn {
+        background: $color-primary;
+        padding: 0.35em;
+        padding-left: 1.2em;
+        border-radius: 0.9em;
+        border: none;
+        letter-spacing: 0.05em;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+          rgba(17, 17, 26, 0.1) 0px 16px 56px,
+          rgba(17, 17, 26, 0.1) 0px 24px 80px;
+        height: 1.8em;
+        padding-right: 1.2em;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+      .sale-btn-a {
+        color: $color-bg;
+        margin-top: -3px;
+        font-family: $font-mono;
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: 700;
+      }
+      // for slide animation of disclaimer
+      @keyframes slide {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(100%);
+        }
+      }
+      .sale-disclaimer {
+        animation: slide 2.7s infinite linear;
+        color: rgba(49, 47, 77, 0.51);
+        font-family: $font-condensed;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 30px;
+      }
+    }
   } //main-content ends here
+  @include footer;
 }
