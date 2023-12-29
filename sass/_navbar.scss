@@ -156,16 +156,17 @@
       border-radius: 0;
       gap: 0;
       width: 100vw;
-      z-index: 0;
 
       .branding {
         display: flex;
+        margin-left: 40px;
         width: 150px;
       }
       .hamburger {
         display: none;
       }
       .navigation {
+        margin-right: 40px;
         display: flex;
         justify-content: center;
         align-items: center;

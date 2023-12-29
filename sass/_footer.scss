@@ -84,4 +84,39 @@
         }
     }
   }  
+
+  @media screen and (min-width:1024px){
+    .footer{
+      height: 65vh;
+
+      .page-links{
+        gap: 40px;
+
+        .page-link{
+          transition: all 0.2s ease-in-out;
+        }
+        .page-link:hover{
+          color: rgb(164, 148, 221);
+          scale: 1.2;
+        }
+      }
+    }
+  }
+  @media screen and (min-width:1280px){
+    .footer{
+      height: 50vh;
+
+      .page-links{
+        gap: 40px;
+
+        .page-link{
+          transition: all 0.2s ease-in-out;
+        }
+        .page-link:hover{
+          color: rgb(164, 148, 221);
+          scale: 1.2;
+        }
+      }
+    }
+  }
 }

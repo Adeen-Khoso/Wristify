@@ -51,7 +51,7 @@ body {
         }
       }
 
-      //   hero text
+      //   hero text and other content ! 
       .hero-text {
         display: flex;
         flex-direction: column;
@@ -79,93 +79,93 @@ body {
           padding-top: 15px;
           font-weight: 400;
         }
-      }
 
-      //   hero-section button
-      .hero-btn {
-        background: $color-primary;
-        padding: 0.35em;
-        padding-left: 1.2em;
-        border-radius: 0.9em;
-        border: none;
-        letter-spacing: 0.05em;
-        display: flex;
-        align-items: center;
-        box-shadow: inset 0 0 1.6em -0.6em #714da6;
-        overflow: hidden;
-        position: relative;
-        height: 1.8em;
-        padding-right: 2em;
-        cursor: pointer;
-
-        .hero-btn-a {
-          color: $color-bg;
-          margin-top: -3px;
-          font-family: $font-mono;
-          text-transform: uppercase;
-          font-size: 15px;
-          font-weight: 700;
-        }
-
-        .icon {
-          background: white;
-          margin-left: 1em;
-          position: absolute;
+        //   hero-section button
+        .hero-btn {
+          background: $color-primary;
+          padding: 0.35em;
+          padding-left: 1.2em;
+          border-radius: 0.9em;
+          border: none;
+          letter-spacing: 0.05em;
           display: flex;
           align-items: center;
+          box-shadow: inset 0 0 1.6em -0.6em #714da6;
+          overflow: hidden;
+          position: relative;
+          height: 1.8em;
+          padding-right: 2em;
+          cursor: pointer;
+
+          .hero-btn-a {
+            color: $color-bg;
+            margin-top: -3px;
+            font-family: $font-mono;
+            text-transform: uppercase;
+            font-size: 15px;
+            font-weight: 700;
+          }
+
+          .icon {
+            background: white;
+            margin-left: 1em;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 1.1em;
+            width: 1.1em;
+            border-radius: 0.7em;
+            box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+            right: 0.3em;
+            transition: all 0.3s;
+          }
+        }
+
+        .hero-btn:hover .icon {
+          width: calc(100% - 0.6em);
+        }
+
+        .hero-btn .icon svg {
+          width: 0.9em;
+          transition: transform 0.3s;
+          color: #7b52b9;
+        }
+
+        .hero-btn:hover .icon svg {
+          transform: translateX(0.1em);
+        }
+
+        .hero-btn:active .icon {
+          transform: scale(0.95);
+        }
+
+        // stats
+        .stats {
+          margin-top: 15px;
+          display: flex;
+          flex-direction: row;
           justify-content: center;
-          height: 1.1em;
-          width: 1.1em;
-          border-radius: 0.7em;
-          box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
-          right: 0.3em;
-          transition: all 0.3s;
-        }
-      }
-
-      .hero-btn:hover .icon {
-        width: calc(100% - 0.6em);
-      }
-
-      .hero-btn .icon svg {
-        width: 0.9em;
-        transition: transform 0.3s;
-        color: #7b52b9;
-      }
-
-      .hero-btn:hover .icon svg {
-        transform: translateX(0.1em);
-      }
-
-      .hero-btn:active .icon {
-        transform: scale(0.95);
-      }
-
-      // stats
-      .stats {
-        margin-top: 15px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 20px;
-
-        .stat,
-        .highlighted-stat {
-          width: 70px;
-          margin: 10px;
+          align-items: center;
           text-align: center;
-          text-transform: uppercase;
-          font-family: $font-condensed;
-          font-weight: 500;
-          color: $color-primary;
-          font-size: 14px;
-        }
-        .highlighted-stat {
-          color: $color-light;
-          font-weight: 600;
-          font-size: 18px;
+          padding: 20px;
+
+          .stat,
+          .highlighted-stat {
+            width: 70px;
+            margin: 10px;
+            text-align: center;
+            text-transform: uppercase;
+            font-family: $font-condensed;
+            font-weight: 500;
+            color: $color-primary;
+            font-size: 14px;
+          }
+          .highlighted-stat {
+            color: $color-light;
+            font-weight: 600;
+            font-size: 18px;
+          }
         }
       }
     }
@@ -187,7 +187,6 @@ body {
       width: 100vw;
 
       .features-heading {
-        top: 2;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -502,7 +501,8 @@ body {
       }
       // for pulse animation
       @keyframes pulse {
-        0%, 100% {
+        0%,
+        100% {
           transform: scale(1);
         }
         50% {
@@ -534,6 +534,11 @@ body {
         padding-right: 1.2em;
         cursor: pointer;
         margin-top: 20px;
+        transition: all 0.5s ease-in-out;
+        
+      }
+      .sale-btn:hover{
+        scale: 1.3;
       }
       .sale-btn-a {
         color: $color-bg;
@@ -566,3 +571,144 @@ body {
   } //main-content ends here
   @include footer;
 }
+
+@media screen and (min-width: 1024px) {
+  body {
+    .header {
+      .hero {
+        flex-direction: row;
+        text-align: left;
+        justify-content: space-between;
+        align-items: center;
+
+        .hero-img {
+          order: 2;
+          width: 335px;
+          margin-right: 10px;
+        }
+        .hero-text {
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-evenly;
+          gap: 20px;
+          text-align: left;
+          width: 470px;
+          padding: 40px;
+
+          .hero-h1,
+          .highlighted-text {
+            margin-top: 0px;
+            text-align: left;
+            font-size: 55px;
+            padding: 0px;
+          }
+          .hero-dis {
+            text-align: left;
+            font-size: 18px;
+            padding: 0;
+          }
+          .hero-btn {
+            margin: 0px;
+          }
+          .stats {
+            padding: 0px;
+            margin: 0;
+            margin-top: 5px;
+            gap: 25px;
+
+            .stat,
+            .highlighted-stat {
+              width: 90px;
+              margin: 0px;
+              font-size: 16px;
+            }
+            .highlighted-stat {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+    // header ends here
+    .main{
+      .features-section{
+        .features-heading{
+          .features-h1{
+            font-size: 45px;
+            letter-spacing: 1.7px;
+          }
+          .features-dis{
+            font-size: 19px;
+          }
+        }
+        .features-container{
+          width: 90%;
+          gap: 60px;
+          .feature{
+            width: 220px;
+
+            .item-h1{
+              font-size: 20px;
+            }
+            .item-dis{
+              font-size: 17.5px;
+            }
+          }
+          .feature:nth-child(6){
+            width: 160px;
+            margin-left: 40px;
+          }
+        }
+      }
+
+      // about section starts here 
+      .about-section{
+        display: flex;
+        align-items: flex-start;
+        height: 80vh;
+        gap: 40px;
+        
+        .about-h1{
+          font-size: 55px;
+          padding-left: 65px;
+          text-align: left;
+          padding-bottom: 0;
+        }
+        .about-img{
+          position: absolute;
+          right: 0;
+          width: 440px;
+          padding-right: 65px;
+        }
+        .about-dis{
+          font-size: 18px;
+          padding: 0px;
+          padding-left: 65px;
+          width: 320px;
+          text-align: left;
+        }
+        .about-section-btn{
+          margin: 0px;
+          margin-left: 65px;
+        }
+      }
+
+      // review section starts here
+      .review-section{
+        height: 80vh;
+
+        .wrapper{
+          width: 100vw;
+          display: flex;
+          justify-content: center;
+        }
+      }
+
+      // sale baanner
+      .sale-banner{
+        height: 60vh;
+      }
+    }
+  }
+}
+
