@@ -1,4 +1,5 @@
 @mixin navbar {
+  // for mobile devices
   .nav {
     display: grid;
     position: fixed;
@@ -12,7 +13,7 @@
     padding: 0.5rem 1rem;
     background-color: #f0ece5d1;
     border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px; 
+    border-bottom-right-radius: 12px;
 
     // branding
     .branding {
@@ -62,7 +63,7 @@
       }
     }
 
-    // for hamburger toggle animations 
+    // for hamburger toggle animations
     .hamburger.active .line:nth-child(1) {
       transform: translateY(50%) rotate(-45deg) scaleX(1.1);
       width: 40px;
@@ -93,7 +94,7 @@
       background-color: $color-primary;
       transition: height 0.4s ease-in-out;
       border-bottom-left-radius: 25px;
-      border-bottom-right-radius: 25px; 
+      border-bottom-right-radius: 25px;
 
       .ul-tag {
         display: flex;
@@ -135,13 +136,78 @@
       }
     }
     .navigation.active {
-
       height: 380px;
       z-index: 900;
     }
     .navigation.active .ul-tag {
       opacity: 1;
     }
-  } //nav
+  } //nav for mobile devices ends here
 
+  // for laptop devices and higher
+  @media screen and (min-width: 1024px) {
+    .nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f0ece57c;
+      backdrop-filter: blur(5px);
+      border-radius: 0;
+      gap: 0;
+      width: 100vw;
+      z-index: 0;
+
+      .branding {
+        display: flex;
+        width: 150px;
+      }
+      .hamburger {
+        display: none;
+      }
+      .navigation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: auto;
+        background-color: transparent;
+        border-radius: 0;
+
+        .ul-tag {
+          display: flex;
+          justify-content: end;
+          gap: 4em;
+          align-items: center;
+          flex-direction: row;
+          width: 100%;
+          margin: 0;
+          text-align: center;
+          opacity: 1;
+
+          li {
+            margin-bottom: 0;
+            text-align: center;
+            border-bottom: none;
+            border-radius: 0;
+            padding: 0px;
+            border: none;
+          }
+          li:last-child {
+            margin-bottom: 0px;
+          }
+          li:hover {
+            border: none;
+            border-bottom: 2px solid $color-light;
+            border-radius: 0;
+          }
+          .link {
+            color: $color-primary;
+            font-size: 14px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  } //media query
 } //mixin
