@@ -572,7 +572,77 @@ body {
   @include footer;
 }
 
-@media screen and (min-width: 1024px) {
+// for tablets
+@media screen and (min-width:481px) and (max-width:1023px){
+  // hero section 
+  .hero{
+    scale: 1.7;
+
+    .hero-h1{
+      padding-right:70px ;
+      padding-left: 70px;
+    }
+    .hero-h1,
+    .highlighted-text{
+      width: 80%;
+      margin-top: 20px;
+    }
+    .hero-text .hero-dis{
+      width: 340px;
+      padding-right:100px ;
+      padding-left:100px ;
+    }
+  }
+  // features section
+  .features-section{
+    scale: 1.6;
+    
+    .features-heading{
+      margin-top: 200px;
+      width: 80%;
+      padding-left: 150px;
+      padding-right: 150px;
+      
+      .features-h1{
+        padding: 20px;
+      }
+      .features-dis{
+        margin-top: 10px;
+      }
+    }
+    .features-container{
+      width: 50%;
+      padding-right: 200px;
+      padding-left: 200px;
+
+      .feature{
+        scale: 1.1;
+        margin-right: 5px; 
+        margin-left: 5px;
+        margin-top: 10px;
+      }
+    }
+  }
+  .wave-1{
+    display: none;
+  }
+  // about section
+  .about-section{
+    scale: 1.3;
+    height: 90vh;
+    margin-top: 200px;
+    
+    .about-dis{
+      width: 70%;
+      padding-left: 120px;
+      padding-right: 120px;
+      scale:1.2;
+    }
+  }
+}
+
+// for laptop and medium sized devices
+@media screen and (min-width: 1024px) and (max-width:1439px) {
   body {
     .header {
       .hero {
@@ -710,5 +780,44 @@ body {
       }
     }
   }
+}
+
+// for bigger mfs 
+@media only screen and (min-width: 1440px) {
+    .hero{
+      scale: 1.7;
+      .hero-img{
+        width: 1000px;
+      }
+    }
+    .features-section{
+      scale: 1.7;
+      .features-heading{
+        margin-top: 200px;
+      }
+      .features-container{
+        width: 30%;
+        padding-left: 200px;
+        padding-right: 200px;
+      }
+    }
+    .wave-1{
+      display: none;
+    }
+    .about-section{
+      scale: 1.7;
+      margin-top: 400px;
+      .about-dis{
+        width: 40%;
+        padding-left: 300px;
+        padding-right:300px ;
+      }
+    }
+    .review-section{
+      .wrapper{
+        display: flex;
+        justify-content: center;
+      }
+    }
 }
 

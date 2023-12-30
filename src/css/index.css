@@ -875,7 +875,66 @@ body .footer .copyright .copyright-text {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+  .hero {
+    scale: 1.7;
+  }
+  .hero .hero-h1 {
+    padding-right: 70px;
+    padding-left: 70px;
+  }
+  .hero .hero-h1,
+  .hero .highlighted-text {
+    width: 80%;
+    margin-top: 20px;
+  }
+  .hero .hero-text .hero-dis {
+    width: 340px;
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+  .features-section {
+    scale: 1.6;
+  }
+  .features-section .features-heading {
+    margin-top: 200px;
+    width: 80%;
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+  .features-section .features-heading .features-h1 {
+    padding: 20px;
+  }
+  .features-section .features-heading .features-dis {
+    margin-top: 10px;
+  }
+  .features-section .features-container {
+    width: 50%;
+    padding-right: 200px;
+    padding-left: 200px;
+  }
+  .features-section .features-container .feature {
+    scale: 1.1;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: 10px;
+  }
+  .wave-1 {
+    display: none;
+  }
+  .about-section {
+    scale: 1.3;
+    height: 90vh;
+    margin-top: 200px;
+  }
+  .about-section .about-dis {
+    width: 70%;
+    padding-left: 120px;
+    padding-right: 120px;
+    scale: 1.2;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
   body .header .hero {
     flex-direction: row;
     text-align: left;
@@ -989,6 +1048,41 @@ body .footer .copyright .copyright-text {
   }
   body .main .sale-banner {
     height: 60vh;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .hero {
+    scale: 1.7;
+  }
+  .hero .hero-img {
+    width: 1000px;
+  }
+  .features-section {
+    scale: 1.7;
+  }
+  .features-section .features-heading {
+    margin-top: 200px;
+  }
+  .features-section .features-container {
+    width: 30%;
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+  .wave-1 {
+    display: none;
+  }
+  .about-section {
+    scale: 1.7;
+    margin-top: 400px;
+  }
+  .about-section .about-dis {
+    width: 40%;
+    padding-left: 300px;
+    padding-right: 300px;
+  }
+  .review-section .wrapper {
+    display: flex;
+    justify-content: center;
   }
 }
 
