@@ -584,6 +584,9 @@ body .main .about-section .btn-animation {
   filter: blur(0);
   transform: translateY(0);
 }
+body .main .wave-1 {
+  width: 100vw;
+}
 body .main .review-section {
   display: flex;
   flex-direction: column;
