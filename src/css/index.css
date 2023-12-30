@@ -99,6 +99,7 @@ body .header .nav {
   background-color: rgba(240, 236, 229, 0.8196078431);
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
+  height: 40px;
 }
 body .header .nav .branding {
   grid-column: 1;
