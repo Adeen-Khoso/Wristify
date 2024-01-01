@@ -11,9 +11,8 @@
     z-index: 1000;
     gap: 6em;
     padding: 0.5rem 1rem;
-    background-color: #f0ece5d1;
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
+    background-color: $color-bg;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
     height: 40px;
 
     // branding
@@ -152,22 +151,20 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      background-color: #f0ece57c;
-      backdrop-filter: blur(5px);
       border-radius: 0;
       gap: 0;
       width: 100vw;
 
       .branding {
         display: flex;
-        margin-left: 40px;
-        width: 150px;
+        margin-left: 75px;
+        width: 170px;
       }
       .hamburger {
         display: none;
       }
       .navigation {
-        margin-right: 40px;
+        margin-right: 75px;
         display: flex;
         justify-content: center;
         align-items: center;

@@ -657,7 +657,7 @@ body {
         .hero-img {
           order: 2;
           width: 335px;
-          margin-right: 10px;
+          margin-right: 60px;
         }
         .hero-text {
           display: flex;
@@ -665,8 +665,9 @@ body {
           justify-content: space-evenly;
           gap: 20px;
           text-align: left;
-          width: 470px;
+          width: 500px;
           padding: 40px;
+          padding-left: 75px;
 
           .hero-h1,
           .highlighted-text {
@@ -715,8 +716,8 @@ body {
           }
         }
         .features-container{
-          width: 90%;
-          gap: 60px;
+          width: 85%;
+          gap: 70px;
           .feature{
             width: 220px;
 

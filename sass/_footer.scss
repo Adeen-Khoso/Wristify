@@ -76,7 +76,9 @@
     }
     .copyright{
         margin-top: auto;
-        .copyright-text{
+        .copyright-text
+        ,.highlighted-name
+        ,a{
             color: rgba(255, 255, 255, 0.63);
             font-family: $font-condensed;
             font-size: 12px;
@@ -85,12 +87,13 @@
     }
   }  
 
-  @media screen and (min-width:1024px){
+  @media screen and (min-width:1024px) and (max-width:1439px){
     .footer{
       height: 65vh;
 
       .page-links{
         gap: 40px;
+        margin-bottom: 30px;
 
         .page-link{
           transition: all 0.2s ease-in-out;
@@ -100,9 +103,12 @@
           scale: 1.2;
         }
       }
+      .footer-essentials{
+        margin-bottom: 30px;
+      }
     }
   }
-  @media screen and (min-width:1280px){
+  @media screen and (min-width:1440px){
     .footer{
       height: 50vh;
 

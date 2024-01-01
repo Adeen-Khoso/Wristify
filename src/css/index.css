@@ -96,9 +96,8 @@ body .header .nav {
   z-index: 1000;
   gap: 6em;
   padding: 0.5rem 1rem;
-  background-color: rgba(240, 236, 229, 0.8196078431);
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
+  background-color: #F0ECE5;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   height: 40px;
 }
 body .header .nav .branding {
@@ -222,22 +221,20 @@ body .header .nav .navigation.active .ul-tag {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(240, 236, 229, 0.4862745098);
-    backdrop-filter: blur(5px);
     border-radius: 0;
     gap: 0;
     width: 100vw;
   }
   body .header .nav .branding {
     display: flex;
-    margin-left: 40px;
-    width: 150px;
+    margin-left: 75px;
+    width: 170px;
   }
   body .header .nav .hamburger {
     display: none;
   }
   body .header .nav .navigation {
-    margin-right: 40px;
+    margin-right: 75px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -842,18 +839,20 @@ body .footer .footer-essentials .essential {
 body .footer .copyright {
   margin-top: auto;
 }
-body .footer .copyright .copyright-text {
+body .footer .copyright .copyright-text, body .footer .copyright .highlighted-name,
+body .footer .copyright a {
   color: rgba(255, 255, 255, 0.63);
   font-family: "Roboto Condensed", sans-serif;
   font-size: 12px;
   font-weight: 400;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
   body .footer {
     height: 65vh;
   }
   body .footer .page-links {
     gap: 40px;
+    margin-bottom: 30px;
   }
   body .footer .page-links .page-link {
     transition: all 0.2s ease-in-out;
@@ -862,8 +861,11 @@ body .footer .copyright .copyright-text {
     color: rgb(164, 148, 221);
     scale: 1.2;
   }
+  body .footer .footer-essentials {
+    margin-bottom: 30px;
+  }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1440px) {
   body .footer {
     height: 50vh;
   }
@@ -948,7 +950,7 @@ body .footer .copyright .copyright-text {
   body .header .hero .hero-img {
     order: 2;
     width: 335px;
-    margin-right: 10px;
+    margin-right: 60px;
   }
   body .header .hero .hero-text {
     display: flex;
@@ -956,8 +958,9 @@ body .footer .copyright .copyright-text {
     justify-content: space-evenly;
     gap: 20px;
     text-align: left;
-    width: 470px;
+    width: 500px;
     padding: 40px;
+    padding-left: 75px;
   }
   body .header .hero .hero-text .hero-h1,
   body .header .hero .hero-text .highlighted-text {
@@ -997,8 +1000,8 @@ body .footer .copyright .copyright-text {
     font-size: 19px;
   }
   body .main .features-section .features-container {
-    width: 90%;
-    gap: 60px;
+    width: 85%;
+    gap: 70px;
   }
   body .main .features-section .features-container .feature {
     width: 220px;
