@@ -24,7 +24,7 @@
   });
 
   // numbers counter animation !
-  const targetValues = [5000, 1500, 25];
+  const targetValues = [5000, 1500, 25,7300,14];
   const duration = 2500;
   const counterElements = document.querySelectorAll(".highlighted-stat");
 
@@ -47,8 +47,7 @@
     animateValue(element, 0, targetValues[index], duration);
   });
 
-
-
+  
   // intersection observer api for animation events
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -61,7 +60,7 @@
             : 'animate';
         entry.target.classList.add(animationClass);
       } else {
-        entry.target.classList.remove('animate', 'feature-animate', 'btn-animation');
+        entry.target.classList.remove('animate', 'feature-animate', 'btn-animation' );
       }
     });
   });
@@ -75,4 +74,30 @@
   feature.forEach((el)=> observer.observe(el));
 
   const buttonElements = document.querySelectorAll(".btn");
-buttonElements.forEach((el) => observer.observe(el));
+  buttonElements.forEach((el) => observer.observe(el));
+
+
+// for slider buttons
+const wrapper = document.querySelector('.wrapper');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+
+let scrollAmount = 0;
+
+prevBtn.addEventListener('click', () => {
+  scrollAmount -= 300; 
+  wrapper.scrollTo({
+    top: 0,
+    left: scrollAmount,
+    behavior: 'smooth'
+  });
+});
+
+nextBtn.addEventListener('click', () => {
+  scrollAmount += 300; 
+  wrapper.scrollTo({
+    top: 0,
+    left: scrollAmount,
+    behavior: 'smooth'
+  });
+});
