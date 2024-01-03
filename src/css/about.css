@@ -308,17 +308,6 @@ body .header .hero-section .hero-content .heading {
   font-family: "Roboto Flex", sans-serif;
   letter-spacing: 0.7px;
   font-size: 35px;
-  filter: blur(5px);
-  opacity: 0;
-  transform: translateY(50px);
-  animation: slideIn 1s forwards;
-}
-@keyframes slideIn {
-  to {
-    filter: blur(0px);
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 body .header .hero-section .hero-content .doodle {
   width: 50px;
