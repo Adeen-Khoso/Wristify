@@ -3,6 +3,7 @@
 @import "default";
 @import "navbar";
 @import "footer";
+@import "utils";
 
 body {
   width: 100vw;
@@ -46,6 +47,18 @@ body {
           font-family: $font-flex;
           letter-spacing: 0.7px;
           font-size: 35px;
+          filter: blur(5px);
+          opacity: 0;
+          transform: translateY(50px);
+          animation: slideIn 1s forwards;
+        }
+
+        @keyframes slideIn {
+            to {
+                filter: blur(0px);
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .doodle {
@@ -80,7 +93,19 @@ body {
 
       .mission-img {
         width: 260px;
+        transform: scale(0);
+        animation: scaleIn 1.45s ease-in-out forwards;
       }
+      @keyframes scaleIn {
+        from {
+          transform: scale(0.5);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+
+      
       .mission-text {
         display: flex;
         flex-direction: column;

@@ -3,17 +3,7 @@
 @import "default";
 @import "navbar";
 @import "footer";
-
-// utility classes
-.hidden {
-  opacity: 0;
-  transition: opacity 0.7s ease-in;
-  filter: blur(3px);
-}
-.animate {
-  opacity: 1;
-  filter: blur(0);
-}
+@import "utils";
 
 body {
   width: 100vw;

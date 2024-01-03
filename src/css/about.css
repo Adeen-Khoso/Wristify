@@ -68,6 +68,17 @@ svg {
     background-color: rgba(49, 47, 77, 0.7921568627);
   }
 }
+.hidden {
+  opacity: 0;
+  transition: opacity 0.8s ease-in;
+  filter: blur(5px);
+}
+
+.animate {
+  opacity: 1;
+  filter: blur(0);
+}
+
 body {
   width: 100vw;
   height: 100dvh;
@@ -297,6 +308,17 @@ body .header .hero-section .hero-content .heading {
   font-family: "Roboto Flex", sans-serif;
   letter-spacing: 0.7px;
   font-size: 35px;
+  filter: blur(5px);
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideIn 1s forwards;
+}
+@keyframes slideIn {
+  to {
+    filter: blur(0px);
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 body .header .hero-section .hero-content .doodle {
   width: 50px;
@@ -324,6 +346,16 @@ body .main .mission-section {
 }
 body .main .mission-section .mission-img {
   width: 260px;
+  transform: scale(0);
+  animation: scaleIn 1.45s ease-in-out forwards;
+}
+@keyframes scaleIn {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 body .main .mission-section .mission-text {
   display: flex;
@@ -708,6 +740,7 @@ body .footer .page-links {
   display: flex;
   flex-direction: row;
   text-transform: uppercase;
+  gap: 15px;
 }
 body .footer .page-links .page-link {
   font-family: "Roboto Condensed", sans-serif;

@@ -1,0 +1,11 @@
+
+// utility classes
+.hidden {
+    opacity: 0;
+    transition: opacity 0.8s ease-in;
+    filter: blur(5px);
+}
+.animate {
+    opacity: 1;
+    filter: blur(0);
+}
