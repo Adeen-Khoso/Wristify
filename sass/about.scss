@@ -51,6 +51,7 @@ body {
           opacity: 0;
           transform: translateY(50px);
           animation: slideIn 1s forwards;
+          transition: opacity 1s, transform 1s;
         }
 
         @keyframes slideIn {
