@@ -61,11 +61,12 @@ svg {
   ::-webkit-scrollbar-thumb {
     background-color: #7b78c6;
     border-radius: 12px;
-    height: 2px;
+    height: 1.5px;
   }
   ::-webkit-scrollbar-track {
     height: 3px;
     background-color: rgba(49, 47, 77, 0.7921568627);
+    border-radius: 32px;
   }
 }
 .hidden {
@@ -85,6 +86,9 @@ body {
   background-color: #F0ECE5;
   overflow-x: hidden;
   overflow-y: auto;
+}
+body .header {
+  background-color: #d9d9d9;
 }
 body .header .nav {
   display: grid;
@@ -797,6 +801,100 @@ body .footer .copyright a {
   body .footer .page-links .page-link:hover {
     color: rgb(164, 148, 221);
     scale: 1.2;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  body .header .hero-section {
+    height: 67vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  body .header .hero-section .hero-content {
+    padding-left: 90px;
+    width: 500px;
+    justify-content: center;
+  }
+  body .header .hero-section .hero-content .sub-heading {
+    font-size: 14px;
+    color: #626098;
+  }
+  body .header .hero-section .hero-content .heading {
+    font-size: 40px;
+  }
+  body .header .hero-section .hero-img {
+    margin-top: 40px;
+    margin-right: 90px;
+    display: block;
+    width: 400px;
+  }
+  body .main .mission-section {
+    height: 75vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  body .main .mission-section .mission-text {
+    padding: 0px;
+    margin-top: 20px;
+    padding-left: 90px;
+    text-align: left;
+  }
+  body .main .mission-section .mission-text .mission-dis {
+    text-align: left;
+    font-size: 19.5px;
+    width: 435px;
+    margin-top: 30px;
+    line-height: 166%;
+  }
+  body .main .mission-section .mission-img {
+    margin-top: 30px;
+    margin-right: 80px;
+    order: 2;
+    width: 400px;
+  }
+  body .main .purple-arrow {
+    margin-top: 100px;
+  }
+  body .main .story-section {
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  body .main .story-section .story-text {
+    padding: 0px;
+    order: 2;
+    width: 530px;
+    padding-right: 90px;
+    padding-left: 20px;
+  }
+  body .main .story-section .story-text .story-dis {
+    font-size: 14px;
+  }
+  body .main .story-section .story-text .story-dis .paragraph {
+    text-align: left;
+  }
+  body .main .story-section .story-img {
+    width: 430px;
+    margin-left: 90px;
+  }
+  body .main .quote-section {
+    height: 60vh;
+    justify-content: center;
+  }
+  body .main .quote-section .quote {
+    margin-top: 0px;
+    font-size: 25px;
+    width: 430px;
+  }
+  body .main .quote-section .quote .grey-blob {
+    top: 2%;
+    width: 370px;
+    right: none;
+    opacity: 20%;
   }
 }
 

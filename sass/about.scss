@@ -14,6 +14,7 @@ body {
 
   .header {
     @include navbar;
+    background-color: #d9d9d9;
 
     // first section /hero section
     .hero-section {
@@ -92,7 +93,6 @@ body {
         }
       }
 
-      
       .mission-text {
         display: flex;
         flex-direction: column;
@@ -464,4 +464,117 @@ body {
 
   //   footer
   @include footer;
+}
+
+// for laptop devices 
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  body {
+    .header {
+      .hero-section {
+        height: 67vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .hero-content {
+          padding-left: 90px;
+          width: 500px;
+          justify-content: center;
+
+          .sub-heading {
+            font-size: 14px;
+            color: $color-light;
+          }
+          .heading {
+            font-size: 40px;
+          }
+        }
+        .hero-img {
+          margin-top: 40px;
+          margin-right: 90px;
+          display: block;
+          width: 400px;
+        }
+      }
+    }
+
+    .main {
+      .mission-section {
+        height: 75vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .mission-text {
+          padding: 0px;
+          margin-top: 20px;
+          padding-left: 90px;
+          text-align: left;
+
+          .mission-dis {
+            text-align: left;
+            font-size: 19.5px;
+            width: 435px;
+            margin-top: 30px;
+            line-height: 166%;
+          }
+        }
+        .mission-img {
+          margin-top: 30px;
+          margin-right: 80px;
+          order: 2;
+          width: 400px;
+        }
+      }
+
+      .purple-arrow{
+        margin-top: 100px;
+      }
+      .story-section{
+        margin-top:0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .story-text{
+          padding: 0px;
+          order: 2;
+          width: 530px;
+          padding-right: 90px;
+          padding-left: 20px;
+
+          .story-dis{
+            font-size: 14px;
+
+            .paragraph{
+              text-align: left;
+            }
+          }
+        }
+        .story-img{
+          width:430px ;
+          margin-left:90px ;
+        }
+      }
+      .quote-section{
+        height: 60vh;
+        justify-content: center;
+
+        .quote{
+          margin-top: 0px;
+          font-size: 25px;
+          width: 430px;
+
+          .grey-blob{
+            top: 2%;
+            width: 370px;
+            right: none;
+            opacity: 20%;
+          }
+        }
+        
+      }
+    }
+  }
 }
