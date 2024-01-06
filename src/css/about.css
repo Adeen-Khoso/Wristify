@@ -804,7 +804,19 @@ body .footer .copyright a {
   }
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1439px) {
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+  body .hero-section {
+    align-items: center;
+  }
+  body .hero-section .hero-content {
+    text-align: center;
+    align-items: center;
+  }
+  body .main .quote-section .quote .grey-blob {
+    display: none;
+  }
+}
+@media screen and (min-width: 1024px) {
   body .header .hero-section {
     height: 67vh;
     display: flex;
