@@ -473,6 +473,9 @@ body {
       .hero-content{
         text-align: center;
         align-items: center;
+        .heading{
+          text-align: center;
+        }
       }
     }
     .main .quote-section .quote .grey-blob{
@@ -570,6 +573,19 @@ body {
         .story-img{
           width:430px ;
           margin-left:90px ;
+        }
+      }
+      .community-section{
+        margin-top: 120px;
+
+        .community-text{
+          margin-top: 20px;
+          .community-dis{
+            width: 770px;
+          }
+        }
+        .stats{
+          padding-top: 5px;
         }
       }
       .quote-section{

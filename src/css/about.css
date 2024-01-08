@@ -812,6 +812,9 @@ body .footer .copyright a {
     text-align: center;
     align-items: center;
   }
+  body .hero-section .hero-content .heading {
+    text-align: center;
+  }
   body .main .quote-section .quote .grey-blob {
     display: none;
   }
@@ -892,6 +895,18 @@ body .footer .copyright a {
   body .main .story-section .story-img {
     width: 430px;
     margin-left: 90px;
+  }
+  body .main .community-section {
+    margin-top: 120px;
+  }
+  body .main .community-section .community-text {
+    margin-top: 20px;
+  }
+  body .main .community-section .community-text .community-dis {
+    width: 770px;
+  }
+  body .main .community-section .stats {
+    padding-top: 5px;
   }
   body .main .quote-section {
     height: 60vh;
