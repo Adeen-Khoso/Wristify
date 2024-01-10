@@ -22,8 +22,9 @@ body {
       justify-content: center;
       align-items: center;
       text-align: center;
-      height: 90vh;
+      height: 80vh;
       width: 100vw;
+      margin-top: 40px;
 
       .hero-img {
         display: none;
@@ -77,7 +78,6 @@ body {
           cursor: pointer;
           margin-top: 20px;
           transition: all 0.5s ease-in-out;
-          margin-bottom: 30px;
         }
         .hero-btn:hover {
           scale: 1.3;
@@ -94,21 +94,148 @@ body {
     } //hero section ends here
   }
 
-//   mainn page content starts here
-  .main{
-
+  //   mainn page content starts here
+  .main {
     // cmp section starts here
-    .compatibility-section{
-        border-top: 2px $color-bg;
-        z-index: 10;
+    .compatibility-section {
+      border-top: 2px $color-bg;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 25px;
+      background-color: #d9d9d9;
+
+      .cmp-h1 {
+        color: $color-primary;
+        font-family: $font-major;
+        font-size: 30px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-top: 40px;
+      }
+      .cmp-dis {
+        width: 296px;
+        color: $color-primary;
+        font-size: 16px;
+        font-family: $font-condensed;
+      }
+      .systems{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
-        text-align: center;
-        gap: 25px;
-        background-color: #D9D9D9;
-    }
+        gap: 20px;
+        margin-bottom: 40px;
 
-  }
+        .s-icon{
+          width: 40px;
+        }
+        .plus{
+          color: $color-light;
+          font-family: $font-stylish;
+          font-size: 50px;
+        }
+      }
+    }
+    // cmp section end  here
+
+    // collection section starts here
+    .collection-section{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      .collection-h1{
+        font-size: 28px;
+        color: $color-primary;
+        font-family: $font-major;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin: 30px;
+        margin-top: 65px;
+      }
+      .products{
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .product-card{
+          background-color: #d9d9d9;
+          height: 210px;
+          width: 140px;
+          border-radius: 32px;
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+
+          .product-img{
+            width: 90px;
+          }
+          .product-name{
+            color: $color-primary;
+            font-family: $font-stylish;
+            font-size: 14px;
+            text-transform: uppercase;
+            padding: 4px;
+          }
+          .product-price{
+            color: $color-light;
+            font-family: $font-stylish;
+            font-size: 12px;
+          }
+          .product-btn {
+            background: $color-primary;
+            padding: 0.35em;
+            padding-left: 1.2em;
+            border-radius: 0.9em;
+            border: none;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+            height: 1.2em;
+            padding-right: 1em;
+            cursor: pointer;
+            margin-bottom: 5px;
+            margin-top: 10px;
+            transition: all 0.5s ease-in-out;
+          }
+          .product-btn:hover {
+            scale: 1.3;
+          }
+          .p-btn-a {
+            color: $color-bg;
+            margin-top: -3px;
+            font-family: $font-mono;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 700;
+          }
+        }
+        .product-card:nth-child(4){
+          .product-img{
+            width: 80px;
+            padding-bottom: 2px;
+          }
+        }
+        .product-card:nth-child(5){
+          .product-img{
+            width: 85px;
+          }
+        }
+      }
+    }
+  } //main content ends here
 }
