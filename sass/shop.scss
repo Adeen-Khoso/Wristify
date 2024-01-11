@@ -22,12 +22,12 @@ body {
       justify-content: center;
       align-items: center;
       text-align: center;
-      height: 80vh;
+      height: 100vh;
       width: 100vw;
-      margin-top: 40px;
 
       .hero-img {
-        display: none;
+        display:block;
+        width: 220px;
       }
       .hero-text {
         display: flex;
@@ -64,19 +64,20 @@ body {
         }
         .hero-btn {
           background: $color-primary;
-          padding: 0.35em;
+          padding: 0.30em;
           padding-left: 1.2em;
           border-radius: 0.9em;
           border: none;
           letter-spacing: 0.05em;
           display: flex;
+          justify-content: center;
           align-items: center;
           overflow: hidden;
           position: relative;
-          height: 1.8em;
+          // height: 1.8em;
           padding-right: 1.2em;
           cursor: pointer;
-          margin-top: 20px;
+          margin-top: 10px;
           transition: all 0.5s ease-in-out;
         }
         .hero-btn:hover {
@@ -84,10 +85,10 @@ body {
         }
         .hero-btn-a {
           color: $color-bg;
-          margin-top: -3px;
+          margin-top: -1px;
           font-family: $font-mono;
           text-transform: uppercase;
-          font-size: 15px;
+          font-size: 14px;
           font-weight: 700;
         }
       }
@@ -98,6 +99,7 @@ body {
   .main {
     // cmp section starts here
     .compatibility-section {
+      width: 100vw;
       border-top: 2px $color-bg;
       z-index: 10;
       display: flex;
@@ -114,7 +116,7 @@ body {
         font-size: 30px;
         font-weight: 700;
         text-transform: uppercase;
-        margin-top: 40px;
+        margin-top: 50px;
       }
       .cmp-dis {
         width: 296px;
@@ -195,14 +197,15 @@ body {
             font-size: 12px;
           }
           .product-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             background: $color-primary;
-            padding: 0.35em;
+            // padding: 0.35em;
             padding-left: 1.2em;
             border-radius: 0.9em;
             border: none;
             letter-spacing: 0.05em;
-            display: flex;
-            align-items: center;
             overflow: hidden;
             position: relative;
             height: 1.2em;
@@ -235,6 +238,39 @@ body {
             width: 85px;
           }
         }
+      }
+    }
+    // collection ends here
+
+    .awards-section{
+      background-color: #d9d9d9;
+      width: 100vw;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-top: 50px;
+      gap: 20px;
+
+      .awards-heading{
+        color: $color-light;
+        font-size: 18px;
+        font-family: $font-stylish;
+        text-transform: uppercase;
+      }
+      .award{
+        text-transform: uppercase;
+        color: $color-primary;
+        font-size: 28px;
+        font-family: $font-major;
+        font-weight: 700;
+      }
+      .award-dis{
+        color: $color-primary;
+        font-family: $font-condensed;
+        font-size: 18px;
       }
     }
   } //main content ends here
