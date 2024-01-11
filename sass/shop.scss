@@ -81,7 +81,7 @@ body {
           transition: all 0.5s ease-in-out;
         }
         .hero-btn:hover {
-          scale: 1.3;
+          scale: 1.1;
         }
         .hero-btn-a {
           color: $color-bg;
@@ -151,6 +151,7 @@ body {
       justify-content: center;
       align-items: center;
       text-align: center;
+      width: 100vw;
 
       .collection-h1{
         font-size: 28px;
@@ -245,6 +246,7 @@ body {
     .awards-section{
       background-color: #d9d9d9;
       width: 100vw;
+      height: 50vh;
       padding: 25px;
       display: flex;
       flex-direction: column;
@@ -252,26 +254,183 @@ body {
       align-items: center;
       text-align: center;
       margin-top: 50px;
-      gap: 20px;
 
-      .awards-heading{
-        color: $color-light;
-        font-size: 18px;
-        font-family: $font-stylish;
-        text-transform: uppercase;
+      .award-img{
+        display: none;
       }
-      .award{
-        text-transform: uppercase;
-        color: $color-primary;
-        font-size: 28px;
-        font-family: $font-major;
-        font-weight: 700;
+      .awards-text{
+        gap: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        .awards-heading{
+          color: $color-light;
+          font-size: 18px;
+          font-family: $font-stylish;
+          text-transform: uppercase;
+        }
+        .award{
+          margin-top: -25px;
+          text-transform: uppercase;
+          color: $color-primary;
+          font-size: 28px;
+          font-family: $font-major;
+          font-weight: 700;
+        }
+        .award-dis{
+          color: $color-primary;
+          font-family: $font-condensed;
+          font-size: 18px;
+        }
+        .award-btn{
+          background-color: rgba(49, 47, 77, 0.51);
+          width: 120px;
+          height: 25px; 
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          border-radius: 32px;
+          transition: all 0.3s ease;
+  
+          .a-tag{
+            margin-top: -2px;
+            color: $color-bg;
+            font-family: $font-mono;
+            font-size: 15px;
+            font-weight: 600; 
+            text-transform: uppercase;
+  
+          }
+        }
       }
-      .award-dis{
-        color: $color-primary;
-        font-family: $font-condensed;
-        font-size: 18px;
-      }
+ 
     }
   } //main content ends here
+  @include footer;
+}
+
+// for tablets
+@media screen and (min-width:481px) and (max-width:1023px){
+  body{
+    .hero-section{
+      scale: 1.5;
+    }
+  }
+}
+
+// for laptops and medium sized devices
+@media screen and (min-width: 1024px) and (max-width:1439px) {
+  body{
+    .header{
+      .hero-section{
+        .hero-img{
+          width: 250px;
+        }
+        .hero-text{
+          width: 600px;
+
+          .sale-p,
+          .hero-heading,
+          .highlighted-text{
+            font-size: 50px;
+          }
+          .hero-heading,
+          .highlighted-text{
+            margin-bottom: 20px;
+          }
+          .hero-dis{
+            font-size: 18px;
+            margin-bottom: 10px;
+          }
+        }
+        .hero-btn{
+          margin-top: 0px;
+        }
+      }
+    }
+
+    .main{
+      .compatibility-section{
+        .cmp-dis{
+          font-size: 18px;
+          width: 700px;
+        }
+      }
+
+      .collection-section{
+        .products{
+          padding:90px;
+          padding-top: 30px;
+          gap: 35px;
+
+          .product-card{
+            width: 250px;
+            height: 380px;
+
+            .product-img{
+              width: 200px;
+            }
+            .product-name{
+              font-size: 20px;
+            }
+            .product-price{
+              font-size:16px ;
+            }
+          }
+          
+          .product-card:nth-child(5){
+            .product-img{
+              width: 180px;
+            }
+          }
+          .product-card:nth-child(4){
+            .product-img{
+              width: 170px;
+              margin-top: 5px;
+            }
+          }
+          .product-card:nth-child(6){
+            .product-name{
+              margin-top: -30px;
+            }
+          }
+          .product-btn{
+            width: 100px;
+          }
+        }
+      }
+
+      .awards-section{
+        display: flex;
+        flex-direction: row;
+        height: 70vh;
+        gap: 100px;
+
+        .award-img{
+          display: block;
+          height: 300px;
+        }
+        .awards-text{
+          align-items: flex-start;
+          width: 560px;
+
+          .award{
+            font-size:32px ;
+          }
+          .award-dis{
+            text-align: left;
+          }
+        }
+        .award-btn:hover{
+          background-color:rgba(49, 47, 77, 0.685);
+          scale: 1.1;
+          margin-left: 7px;
+        }
+      }
+    }
+  }
 }
