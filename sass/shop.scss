@@ -244,7 +244,7 @@ body {
     // collection ends here
 
     .awards-section{
-      background-color: #d9d9d9;
+      background-color: $color-bg;
       width: 100vw;
       height: 50vh;
       padding: 25px;
@@ -253,7 +253,6 @@ body {
       justify-content: center;
       align-items: center;
       text-align: center;
-      margin-top: 50px;
 
       .award-img{
         display: none;
@@ -322,8 +321,8 @@ body {
   }
 }
 
-// for laptops and medium sized devices
-@media screen and (min-width: 1024px) and (max-width:1439px) {
+// for laptops and higher sized devices
+@media screen and (min-width: 1024px) {
   body{
     .header{
       .hero-section{

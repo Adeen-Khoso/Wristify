@@ -483,7 +483,7 @@ body .main .collection-section .products .product-card:nth-child(5) .product-img
   width: 85px;
 }
 body .main .awards-section {
-  background-color: #d9d9d9;
+  background-color: #F0ECE5;
   width: 100vw;
   height: 50vh;
   padding: 25px;
@@ -492,7 +492,6 @@ body .main .awards-section {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 50px;
 }
 body .main .awards-section .award-img {
   display: none;
@@ -666,7 +665,7 @@ body .footer .copyright a {
     scale: 1.5;
   }
 }
-@media screen and (min-width: 1024px) and (max-width: 1439px) {
+@media screen and (min-width: 1024px) {
   body .header .hero-section .hero-img {
     width: 250px;
   }
