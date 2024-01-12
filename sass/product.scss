@@ -30,6 +30,28 @@ body {
             justify-content: center;
             align-items: center;
             height: 45vh;
+            
+            .exit-btn{
+                position: absolute;
+                background-color: #46029e56;
+                width: 30px;
+                height: 30px;
+                border-radius: 360px;
+                top: 70px;
+                left: 30px;
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+
+                .exit-btn-a{
+                    backdrop-filter: blur(10px);
+                    font-family: $font-major;
+                    font-size: 18px;
+                    color: white;
+                    margin-top: -3px;
+                }
+            }
 
             .product-img{
                 width: 12.75rem;
@@ -49,6 +71,7 @@ body {
             border-top-left-radius: 32px;
             border-top-right-radius: 32px;
             height: 55vh;
+            width: 100vw;
 
             .product-name{
                 color: $color-primary;
@@ -125,14 +148,15 @@ body {
 
                 .product-img{
                     width:100vw ;
+                    display: flex;
+                    justify-content: center;
 
-                    .celestia-img{
+                    .img{
                         width: 320px;
-                        margin-left: 90px;
                     }
                 }
-
             }
+            
             .product-text{
                 margin-top: 40px;
                 height: 100vh;

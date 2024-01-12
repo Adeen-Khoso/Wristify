@@ -292,6 +292,26 @@ body .product-container .product-img-container {
   align-items: center;
   height: 45vh;
 }
+body .product-container .product-img-container .exit-btn {
+  position: absolute;
+  background-color: rgba(70, 2, 158, 0.337254902);
+  width: 30px;
+  height: 30px;
+  border-radius: 360px;
+  top: 70px;
+  left: 30px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+body .product-container .product-img-container .exit-btn .exit-btn-a {
+  backdrop-filter: blur(10px);
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: white;
+  margin-top: -3px;
+}
 body .product-container .product-img-container .product-img {
   width: 12.75rem;
   margin-top: 40px;
@@ -308,6 +328,7 @@ body .product-container .product-text {
   border-top-left-radius: 32px;
   border-top-right-radius: 32px;
   height: 55vh;
+  width: 100vw;
 }
 body .product-container .product-text .product-name {
   color: #312F4D;
@@ -378,10 +399,11 @@ body .product-container .product-text .product-btn .product-btn-a {
   }
   body .product-container .product-img-container .product-img {
     width: 100vw;
+    display: flex;
+    justify-content: center;
   }
-  body .product-container .product-img-container .product-img .celestia-img {
+  body .product-container .product-img-container .product-img .img {
     width: 320px;
-    margin-left: 90px;
   }
   body .product-container .product-text {
     margin-top: 40px;
