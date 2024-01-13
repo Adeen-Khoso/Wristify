@@ -145,7 +145,7 @@
   } //nav for mobile devices ends here
 
   // for laptop devices and higher
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1024px)  and (max-width:1439px){
     .nav {
       display: flex;
       flex-direction: row;
@@ -205,8 +205,83 @@
             font-size: 14px;
             font-weight: 500;
           }
+          .shop-link{
+            color: $color-light;
+            font-weight: 600;
+          }
         }
       }
     }
   } //media query
+
+@media only screen and (min-width: 1440px) {
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0;
+    gap: 0;
+    width: 100vw;
+    height: 60px;
+
+    .branding {
+      display: flex;
+      margin-left: 75px;
+      width: 170px;
+    }
+    .hamburger {
+      display: none;
+    }
+    .navigation {
+      margin-right: 75px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      height: auto;
+      background-color: transparent;
+      border-radius: 0;
+
+      .ul-tag {
+        display: flex;
+        justify-content: end;
+        gap: 4em;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        opacity: 1;
+
+        li {
+          margin-bottom: 0;
+          text-align: center;
+          border-bottom: none;
+          border-radius: 0;
+          padding: 0px;
+          border: none;
+        }
+        li:last-child {
+          margin-bottom: 0px;
+        }
+        li:hover {
+          border: none;
+          border-bottom: 2px solid $color-light;
+          border-radius: 0;
+        }
+        .link {
+          color: $color-primary;
+          font-size: 16px;
+          font-weight: 600;
+        }
+        .shop-link{
+          color: $color-light;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+  
 } //mixin

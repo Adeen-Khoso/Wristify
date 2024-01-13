@@ -61,11 +61,12 @@ svg {
   ::-webkit-scrollbar-thumb {
     background-color: #7b78c6;
     border-radius: 12px;
-    height: 2px;
+    height: 1.5px;
   }
   ::-webkit-scrollbar-track {
     height: 3px;
     background-color: rgba(49, 47, 77, 0.7921568627);
+    border-radius: 32px;
   }
 }
 .hidden {
@@ -215,7 +216,7 @@ body .header .nav .navigation.active {
 body .header .nav .navigation.active .ul-tag {
   opacity: 1;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
   body .header .nav {
     display: flex;
     flex-direction: row;
@@ -274,6 +275,76 @@ body .header .nav .navigation.active .ul-tag {
     color: #312F4D;
     font-size: 14px;
     font-weight: 500;
+  }
+  body .header .nav .navigation .ul-tag .shop-link {
+    color: #626098;
+    font-weight: 600;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  body .header .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0;
+    gap: 0;
+    width: 100vw;
+    height: 60px;
+  }
+  body .header .nav .branding {
+    display: flex;
+    margin-left: 75px;
+    width: 170px;
+  }
+  body .header .nav .hamburger {
+    display: none;
+  }
+  body .header .nav .navigation {
+    margin-right: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: auto;
+    background-color: transparent;
+    border-radius: 0;
+  }
+  body .header .nav .navigation .ul-tag {
+    display: flex;
+    justify-content: end;
+    gap: 4em;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    opacity: 1;
+  }
+  body .header .nav .navigation .ul-tag li {
+    margin-bottom: 0;
+    text-align: center;
+    border-bottom: none;
+    border-radius: 0;
+    padding: 0px;
+    border: none;
+  }
+  body .header .nav .navigation .ul-tag li:last-child {
+    margin-bottom: 0px;
+  }
+  body .header .nav .navigation .ul-tag li:hover {
+    border: none;
+    border-bottom: 2px solid #626098;
+    border-radius: 0;
+  }
+  body .header .nav .navigation .ul-tag .link {
+    color: #312F4D;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  body .header .nav .navigation .ul-tag .shop-link {
+    color: #626098;
+    font-weight: 700;
   }
 }
 body .header .hero {
@@ -560,7 +631,6 @@ body .main .about-section .about-section-btn {
   background-color: #312F4D;
   color: #F0ECE5;
   transition: 0.6s;
-  box-shadow: 0px 0px 60px #1f4c65;
   -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
   opacity: 0;
   filter: blur(5px);
@@ -738,8 +808,9 @@ body .main .sale-banner .sale-btn {
   margin-top: 20px;
   transition: all 0.5s ease-in-out;
 }
-body .main .sale-banner .sale-btn:hover {
-  scale: 1.3;
+body .main .sale-banner .sale-btn:hover .sale-btn-a {
+  color: rgb(185, 185, 185);
+  box-shadow: grey 2px;
 }
 body .main .sale-banner .sale-btn-a {
   color: #F0ECE5;
@@ -1063,13 +1134,13 @@ body .footer .copyright a {
 }
 @media only screen and (min-width: 1440px) {
   .hero {
-    scale: 1.7;
+    scale: 1.3;
   }
   .hero .hero-img {
     width: 1000px;
   }
   .features-section {
-    scale: 1.7;
+    scale: 1.3;
   }
   .features-section .features-heading {
     margin-top: 200px;
@@ -1078,13 +1149,14 @@ body .footer .copyright a {
     width: 30%;
     padding-left: 200px;
     padding-right: 200px;
+    margin-bottom: 20px;
   }
   .wave-1 {
     display: none;
   }
   .about-section {
-    scale: 1.7;
-    margin-top: 400px;
+    scale: 1.4;
+    margin-top: 200px;
   }
   .about-section .about-dis {
     width: 40%;

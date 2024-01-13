@@ -2,6 +2,7 @@
 const wrapper = document.querySelector(".wrapper");
 const prevBtn = document.querySelector(".prev-btn");
 const nextBtn = document.querySelector(".next-btn");
+const card = document.querySelector("#card");
 
 // for handling previous button click
 function handlePrevButtonClick() {

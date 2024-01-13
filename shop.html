@@ -22,12 +22,12 @@
     <header class="header" id="header">
       <nav class="nav" id="nav">
         <!-- branding -->
-        <div class="branding" id="branding">
+        <a href="index.html" class="branding" id="branding">
           <h1 class="branding-h1">Wristify</h1>
           <div class="logo" id="logo">
             <img src="assets/Logo.png" alt="" class="logo-img" />
           </div>
-        </div>
+        </a>
 
         <!-- hamburger -->
         <div class="hamburger" id="hamburger">
@@ -39,14 +39,10 @@
         <!-- navigation bar with all cta's-->
         <div class="navigation" id="navigation">
           <ul class="ul-tag">
-            <li><a href="index.html" class="link">Home</a></li>
             <li><a href="about.html" class="link">About</a></li>
-            <li>
-              <a href="index.html#review-section" class="link">Reviews</a>
-            </li>
-            <li>
-              <a href="index.html#features-section" class="link">Features</a>
-            </li>
+            <li><a href="index.html#review-section" class="link">Reviews</a></li>
+            <li><a href="index.html#features-section" class="link">Features</a></li>
+            <li><a href="shop.html" class="link shop-link">Shop</a></li>
           </ul>
         </div>
       </nav>
@@ -86,16 +82,13 @@
         <h1 class="collection-h1">collection</h1>
 
         <div class="products">
-
           <div class="product-card">
             <div class="product-img">
               <img src="assets/g-sphere.png" alt="" />
             </div>
             <h1 class="product-name">g-sphere</h1>
             <p class="product-price">$ 300</p>
-            <div class="product-btn">
-              <a href="product.html?id=1" class="p-btn-a">buy</a>
-            </div>
+            <a href="product.html?id=1" class="product-btn">buy</a>
           </div>
 
           <div class="product-card">
@@ -104,9 +97,7 @@
             </div>
             <h1 class="product-name">S-classic</h1>
             <p class="product-price">$ 700</p>
-            <div class="product-btn">
-              <a href="product.html?id=2" class="p-btn-a">buy</a>
-            </div>
+            <a href="product.html?id=2" class="product-btn">buy</a>
           </div>
           <div class="product-card">
             <div class="product-img">
@@ -114,33 +105,25 @@
             </div>
             <h1 class="product-name">celestia</h1>
             <p class="product-price">$ 400</p>
-            <div class="product-btn">
-              <a href="product.html?id=3" class="p-btn-a">buy</a>
-            </div>
+            <a href="product.html?id=3" class="product-btn">buy</a>
           </div>
           <div class="product-card">
             <div class="product-img"><img src="assets/noir.png" alt="" /></div>
             <h1 class="product-name">noir</h1>
             <p class="product-price">$ 550</p>
-            <div class="product-btn">
-              <a href="product.html?id=4" class="p-btn-a">buy</a>
-            </div>
+            <a href="product.html?id=4" class="product-btn">buy</a>
           </div>
           <div class="product-card">
             <div class="product-img"><img src="assets/nova.png" alt="" /></div>
             <h1 class="product-name">nova</h1>
             <p class="product-price">$ 400</p>
-            <div class="product-btn">
-              <a href="product.html?id=5" class="p-btn-a">buy</a>
-            </div>
+            <a href="product.html?id=5" class="product-btn">buy</a>
           </div>
           <div class="product-card">
             <div class="product-img"><img src="assets/onyx.png" alt="" /></div>
             <h1 class="product-name">onyx</h1>
             <p class="product-price">$ 400</p>
-            <div class="product-btn">
-              <a href="product.html?id=6" class="p-btn-a">buy</a>
-            </div>
+            <a href="product.html?id=6" class="product-btn">buy</a>
           </div>
         </div>
       </div>
@@ -168,22 +151,78 @@
       <!-- cmp section ends here -->
 
       <div class="awards-section">
-        <div class="award-img">
-          <img src="assets/celestia.png" alt="" />
-        </div>
-        <div class="awards-text">
-          <h1 class="awards-heading">awards</h1>
-          <h1 class="award">stellar watch of the year</h1>
-          <p class="award-dis">
-            This award is bestowed upon timepieces that excel in the integration
-            of astronomy and celestial aesthetics. The Stellar Cosmos
-            Chronometry Award is representation of the stars and space .
-          </p>
-          <div class="award-btn">
-            <a href="about.html" class="a-tag">More</a>
+
+        <button class="slider-btn prev-btn">&#10094;</button>
+        <button class="slider-btn next-btn">&#10095;</button>
+
+        <div class="wrapper">
+          <div class="award-slider">
+            
+            <!-- card -->
+            <div class="award">
+              <div class="award-img-container">
+                <img class="award-img" src="assets/celestia.png" alt="" />
+              </div>
+              <div class="awards-text">
+                <h1 class="awards-heading">award</h1>
+                <h1 class="award-name">stellar watch of the year</h1>
+                <p class="award-dis">
+                  This award is bestowed upon timepieces that excel in the
+                  integration of astronomy and celestial aesthetics. The Stellar
+                  Cosmos Chronometry Award is representation of the stars and space
+                  .
+                </p>
+                <div class="award-btn">
+                  <a href="about.html" class="a-tag">More</a>
+                </div>
+              </div>
+            </div>
+    
+            <!-- card -->
+            <div class="award">
+              <div class="award-img-container">
+                <img class="award-img" src="assets/onyx.png" alt="" />
+              </div>
+              <div class="awards-text">
+                <h1 class="awards-heading">award</h1>
+                <h1 class="award-name">Rigid watch of the year</h1>
+                <p class="award-dis">
+                  This award is given upon timepieces that excel in the
+                  integration of best material with keeping the aesthetics. The Rigid
+                  Chronometry Award is representation of the power and rigidity.
+                </p>
+                <div class="award-btn">
+                  <a href="about.html" class="a-tag">More</a>
+                </div>
+              </div>
+            </div>
+    
+            <!-- card -->
+            <div class="award">
+              <div class="award-img-container">
+                <img class="award-img" src="assets/s-classic.png" alt="" />
+              </div>
+              <div class="awards-text">
+                <h1 class="awards-heading">award</h1>
+                <h1 class="award-name">Techy watch of the year</h1>
+                <p class="award-dis">
+                  This award is bestowed upon timepieces that excel in the
+                  integration of best features along with keeping the aesthetics of design .
+                  Techy Chronometry Award is representation of Tech and beauty .
+                  .
+                </p>
+                <div class="award-btn">
+                  <a href="about.html" class="a-tag">More</a>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
-      </div>
+        <!-- wrapper ends here -->
+
+      </div>  
+      <!-- award section div ends here -->
     </main>
     <!-- main content ends here !  -->
 

@@ -216,7 +216,7 @@ body .header .nav .navigation.active {
 body .header .nav .navigation.active .ul-tag {
   opacity: 1;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
   body .header .nav {
     display: flex;
     flex-direction: row;
@@ -275,6 +275,67 @@ body .header .nav .navigation.active .ul-tag {
     color: #312F4D;
     font-size: 14px;
     font-weight: 500;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  body .header .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0;
+    gap: 0;
+    width: 100vw;
+  }
+  body .header .nav .branding {
+    display: flex;
+    margin-left: 75px;
+    width: 170px;
+  }
+  body .header .nav .hamburger {
+    display: none;
+  }
+  body .header .nav .navigation {
+    margin-right: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: auto;
+    background-color: transparent;
+    border-radius: 0;
+  }
+  body .header .nav .navigation .ul-tag {
+    display: flex;
+    justify-content: end;
+    gap: 4em;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    opacity: 1;
+  }
+  body .header .nav .navigation .ul-tag li {
+    margin-bottom: 0;
+    text-align: center;
+    border-bottom: none;
+    border-radius: 0;
+    padding: 0px;
+    border: none;
+  }
+  body .header .nav .navigation .ul-tag li:last-child {
+    margin-bottom: 0px;
+  }
+  body .header .nav .navigation .ul-tag li:hover {
+    border: none;
+    border-bottom: 2px solid #626098;
+    border-radius: 0;
+  }
+  body .header .nav .navigation .ul-tag .link {
+    color: #312F4D;
+    font-size: 16px;
+    font-weight: 600;
   }
 }
 body .product-container {

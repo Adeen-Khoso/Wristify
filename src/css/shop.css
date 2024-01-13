@@ -216,7 +216,7 @@ body .header .nav .navigation.active {
 body .header .nav .navigation.active .ul-tag {
   opacity: 1;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
   body .header .nav {
     display: flex;
     flex-direction: row;
@@ -275,6 +275,67 @@ body .header .nav .navigation.active .ul-tag {
     color: #312F4D;
     font-size: 14px;
     font-weight: 500;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  body .header .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0;
+    gap: 0;
+    width: 100vw;
+  }
+  body .header .nav .branding {
+    display: flex;
+    margin-left: 75px;
+    width: 170px;
+  }
+  body .header .nav .hamburger {
+    display: none;
+  }
+  body .header .nav .navigation {
+    margin-right: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: auto;
+    background-color: transparent;
+    border-radius: 0;
+  }
+  body .header .nav .navigation .ul-tag {
+    display: flex;
+    justify-content: end;
+    gap: 4em;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    opacity: 1;
+  }
+  body .header .nav .navigation .ul-tag li {
+    margin-bottom: 0;
+    text-align: center;
+    border-bottom: none;
+    border-radius: 0;
+    padding: 0px;
+    border: none;
+  }
+  body .header .nav .navigation .ul-tag li:last-child {
+    margin-bottom: 0px;
+  }
+  body .header .nav .navigation .ul-tag li:hover {
+    border: none;
+    border-bottom: 2px solid #626098;
+    border-radius: 0;
+  }
+  body .header .nav .navigation .ul-tag .link {
+    color: #312F4D;
+    font-size: 16px;
+    font-weight: 600;
   }
 }
 body .header .hero-section {
@@ -341,8 +402,9 @@ body .header .hero-section .hero-text .hero-btn {
   margin-top: 10px;
   transition: all 0.5s ease-in-out;
 }
-body .header .hero-section .hero-text .hero-btn:hover {
-  scale: 1.1;
+body .header .hero-section .hero-text .hero-btn:hover .hero-btn-a {
+  color: rgb(206, 206, 206);
+  box-shadow: grey 3px;
 }
 body .header .hero-section .hero-text .hero-btn-a {
   color: #F0ECE5;
@@ -452,29 +514,28 @@ body .main .collection-section .products .product-card .product-btn {
   align-items: center;
   justify-content: center;
   background: #312F4D;
-  padding-left: 1.2em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 7px;
+  padding-bottom: 10px;
   border-radius: 0.9em;
   border: none;
   letter-spacing: 0.05em;
   overflow: hidden;
   position: relative;
   height: 1.2em;
-  padding-right: 1em;
   cursor: pointer;
   margin-bottom: 5px;
   margin-top: 10px;
   transition: all 0.5s ease-in-out;
-}
-body .main .collection-section .products .product-card .product-btn:hover {
-  scale: 1.3;
-}
-body .main .collection-section .products .product-card .p-btn-a {
   color: #F0ECE5;
-  margin-top: -3px;
   font-family: "Roboto Mono", monospace;
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 700;
+}
+body .main .collection-section .products .product-card .product-btn:hover {
+  color: #b3b3b3;
 }
 body .main .collection-section .products .product-card:nth-child(4) .product-img {
   width: 80px;
@@ -484,20 +545,77 @@ body .main .collection-section .products .product-card:nth-child(5) .product-img
   width: 85px;
 }
 body .main .awards-section {
-  background-color: #F0ECE5;
-  width: 100vw;
+  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  position: relative;
   height: 50vh;
-  padding: 25px;
+  width: 100vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+body .main .awards-section .slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: #312F4D;
+}
+body .main .awards-section .prev-btn {
+  left: 10px;
+  background-color: rgba(49, 47, 77, 0.1725490196);
+  width: 20px;
+  height: 20px;
+  border-radius: 360px;
+  color: grey;
+  font-size: 8px;
+}
+body .main .awards-section .next-btn {
+  right: 10px;
+  background-color: rgba(49, 47, 77, 0.1725490196);
+  width: 20px;
+  height: 20px;
+  border-radius: 360px;
+  color: grey;
+  font-size: 8px;
+}
+body .main .awards-section .wrapper {
+  position: relative;
+  width: 100%;
+  overflow-x: auto;
+}
+body .main .awards-section .award-slider {
+  position: relative;
+  overflow-y: auto;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  scroll-behavior: auto;
+  overscroll-behavior-x: contain;
+}
+body .main .awards-section .award-slider .award {
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  background-color: #F0ECE5;
+  padding: 15px;
+  width: 280px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-body .main .awards-section .award-img {
+body .main .awards-section .award-slider .award .award-img-container .award-img {
   display: none;
 }
-body .main .awards-section .awards-text {
+body .main .awards-section .award-slider .award .awards-text {
   gap: 25px;
   display: flex;
   flex-direction: column;
@@ -505,13 +623,13 @@ body .main .awards-section .awards-text {
   align-items: center;
   text-align: center;
 }
-body .main .awards-section .awards-text .awards-heading {
+body .main .awards-section .award-slider .award .awards-text .awards-heading {
   color: #626098;
   font-size: 18px;
   font-family: "Righteous", sans-serif;
   text-transform: uppercase;
 }
-body .main .awards-section .awards-text .award {
+body .main .awards-section .award-slider .award .awards-text .award-name {
   margin-top: -25px;
   text-transform: uppercase;
   color: #312F4D;
@@ -519,12 +637,12 @@ body .main .awards-section .awards-text .award {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
 }
-body .main .awards-section .awards-text .award-dis {
+body .main .awards-section .award-slider .award .awards-text .award-dis {
   color: #312F4D;
   font-family: "Roboto Condensed", sans-serif;
   font-size: 18px;
 }
-body .main .awards-section .awards-text .award-btn {
+body .main .awards-section .award-slider .award .awards-text .award-btn {
   background-color: rgba(49, 47, 77, 0.51);
   width: 120px;
   height: 25px;
@@ -535,7 +653,7 @@ body .main .awards-section .awards-text .award-btn {
   border-radius: 32px;
   transition: all 0.3s ease;
 }
-body .main .awards-section .awards-text .award-btn .a-tag {
+body .main .awards-section .award-slider .award .awards-text .award-btn .a-tag {
   margin-top: -2px;
   color: #F0ECE5;
   font-family: "Roboto Mono", monospace;
@@ -725,29 +843,51 @@ body .footer .copyright a {
     width: 100px;
   }
   body .main .awards-section {
+    height: 70vh;
+  }
+  body .main .awards-section .prev-btn,
+  body .main .awards-section .next-btn {
+    height: 30px;
+    width: 30px;
+    font-size: 15px;
+  }
+  body .main .awards-section .wrapper .award-slider .award {
     display: flex;
     flex-direction: row;
-    height: 70vh;
+    justify-content: center;
+    align-items: center;
     gap: 100px;
+    margin: 20px;
+    margin-left: 30px;
+    width: 1100px;
   }
-  body .main .awards-section .award-img {
+  body .main .awards-section .wrapper .award-slider .award .award-img-container .award-img {
     display: block;
-    height: 300px;
+    height: 280px;
   }
-  body .main .awards-section .awards-text {
+  body .main .awards-section .wrapper .award-slider .award .awards-text {
     align-items: flex-start;
-    width: 560px;
+    width: 540px;
   }
-  body .main .awards-section .awards-text .award {
+  body .main .awards-section .wrapper .award-slider .award .awards-text .award-name {
     font-size: 32px;
   }
-  body .main .awards-section .awards-text .award-dis {
+  body .main .awards-section .wrapper .award-slider .award .awards-text .award-dis {
     text-align: left;
   }
-  body .main .awards-section .award-btn:hover {
+  body .main .awards-section .wrapper .award-slider .award .award-btn:hover {
     background-color: rgba(49, 47, 77, 0.685);
     scale: 1.1;
     margin-left: 7px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  body .header .hero-section {
+    scale: 1.4;
+  }
+  body .main .awards-section .wrapper .award-slider .award {
+    margin-left: 40px;
+    width: 1400px;
   }
 }
 

@@ -26,7 +26,7 @@ body {
       width: 100vw;
 
       .hero-img {
-        display:block;
+        display: block;
         width: 220px;
       }
       .hero-text {
@@ -64,7 +64,7 @@ body {
         }
         .hero-btn {
           background: $color-primary;
-          padding: 0.30em;
+          padding: 0.3em;
           padding-left: 1.2em;
           border-radius: 0.9em;
           border: none;
@@ -81,7 +81,10 @@ body {
           transition: all 0.5s ease-in-out;
         }
         .hero-btn:hover {
-          scale: 1.1;
+          .hero-btn-a{
+            color: rgb(206, 206, 206);
+            box-shadow: grey 3px;
+          }
         }
         .hero-btn-a {
           color: $color-bg;
@@ -125,7 +128,7 @@ body {
         font-size: 16px;
         font-family: $font-condensed;
       }
-      .systems{
+      .systems {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -133,10 +136,10 @@ body {
         gap: 20px;
         margin-bottom: 40px;
 
-        .s-icon{
+        .s-icon {
           width: 40px;
         }
-        .plus{
+        .plus {
           color: $color-light;
           font-family: $font-stylish;
           font-size: 50px;
@@ -146,7 +149,7 @@ body {
     // cmp section end  here
 
     // collection section starts here
-    .collection-section{
+    .collection-section {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -154,7 +157,7 @@ body {
       text-align: center;
       width: 100vw;
 
-      .collection-h1{
+      .collection-h1 {
         font-size: 28px;
         color: $color-primary;
         font-family: $font-major;
@@ -163,7 +166,7 @@ body {
         margin: 30px;
         margin-top: 65px;
       }
-      .products{
+      .products {
         padding: 20px;
         display: flex;
         flex-direction: row;
@@ -172,7 +175,7 @@ body {
         align-items: center;
         flex-wrap: wrap;
 
-        .product-card{
+        .product-card {
           background-color: #d9d9d9;
           height: 210px;
           width: 140px;
@@ -183,17 +186,17 @@ body {
           justify-content: center;
           align-items: center;
 
-          .product-img{
+          .product-img {
             width: 90px;
           }
-          .product-name{
+          .product-name {
             color: $color-primary;
             font-family: $font-stylish;
             font-size: 14px;
             text-transform: uppercase;
             padding: 4px;
           }
-          .product-price{
+          .product-price {
             color: $color-light;
             font-family: $font-stylish;
             font-size: 12px;
@@ -203,40 +206,38 @@ body {
             align-items: center;
             justify-content: center;
             background: $color-primary;
-            // padding: 0.35em;
-            padding-left: 1.2em;
+            padding-left: 1em;
+            padding-right: 1em;
+            padding-top: 7px;
+            padding-bottom: 10px;
             border-radius: 0.9em;
             border: none;
             letter-spacing: 0.05em;
             overflow: hidden;
             position: relative;
             height: 1.2em;
-            padding-right: 1em;
             cursor: pointer;
             margin-bottom: 5px;
             margin-top: 10px;
             transition: all 0.5s ease-in-out;
-          }
-          .product-btn:hover {
-            scale: 1.3;
-          }
-          .p-btn-a {
             color: $color-bg;
-            margin-top: -3px;
             font-family: $font-mono;
             text-transform: uppercase;
             font-size: 12px;
             font-weight: 700;
           }
+          .product-btn:hover {
+            color: #b3b3b3;
+          }
         }
-        .product-card:nth-child(4){
-          .product-img{
+        .product-card:nth-child(4) {
+          .product-img {
             width: 80px;
             padding-bottom: 2px;
           }
         }
-        .product-card:nth-child(5){
-          .product-img{
+        .product-card:nth-child(5) {
+          .product-img {
             width: 85px;
           }
         }
@@ -244,79 +245,144 @@ body {
     }
     // collection ends here
 
-    .awards-section{
-      background-color: $color-bg;
-      width: 100vw;
+    .awards-section {
+      padding: 20px;
+      padding-left: 40px;
+      padding-right: 40px;
+      position: relative;
       height: 50vh;
-      padding: 25px;
-      display: flex;
+      width: 100vw;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
 
-      .award-img{
-        display: none;
+      .slider-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 20px;
+        cursor: pointer;
+        border: none;
+        background: none;
+        color: $color-primary;
       }
-      .awards-text{
-        gap: 25px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
 
-        .awards-heading{
-          color: $color-light;
-          font-size: 18px;
-          font-family: $font-stylish;
-          text-transform: uppercase;
-        }
-        .award{
-          margin-top: -25px;
-          text-transform: uppercase;
-          color: $color-primary;
-          font-size: 28px;
-          font-family: $font-major;
-          font-weight: 700;
-        }
-        .award-dis{
-          color: $color-primary;
-          font-family: $font-condensed;
-          font-size: 18px;
-        }
-        .award-btn{
-          background-color: rgba(49, 47, 77, 0.51);
-          width: 120px;
-          height: 25px; 
+      .prev-btn {
+        left: 10px;
+        background-color: #312f4d2c;
+        width: 20px;
+        height: 20px;
+        border-radius: 360px;
+        color: grey;
+        font-size: 8px;
+      }
+
+      .next-btn {
+        right: 10px;
+        background-color: #312f4d2c;
+        width: 20px;
+        height: 20px;
+        border-radius: 360px;
+        color: grey;
+        font-size: 8px;
+      }
+
+      .wrapper {
+        position: relative;
+        width: 100%;
+        overflow-x: auto;
+      }
+      .award-slider {
+        position: relative;
+        overflow-y: auto;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        scroll-snap-type: x mandatory;
+        overflow-x: auto;
+        scroll-behavior: auto;
+        overscroll-behavior-x: contain;
+
+        // card
+        .award {
+          flex-shrink: 0;
+          scroll-snap-align: start;
+          background-color: $color-bg;
+          padding: 15px;
+          width: 280px;
           display: flex;
+          flex-direction: column;
           justify-content: center;
           align-items: center;
           text-align: center;
-          border-radius: 32px;
-          transition: all 0.3s ease;
-  
-          .a-tag{
-            margin-top: -2px;
-            color: $color-bg;
-            font-family: $font-mono;
-            font-size: 15px;
-            font-weight: 600; 
-            text-transform: uppercase;
-  
+
+          .award-img-container {
+            .award-img {
+              display: none;
+            }
+          }
+          .awards-text {
+            gap: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            // margin-top: -20px;
+
+            .awards-heading {
+              color: $color-light;
+              font-size: 18px;
+              font-family: $font-stylish;
+              text-transform: uppercase;
+            }
+            .award-name {
+              margin-top: -25px;
+              text-transform: uppercase;
+              color: $color-primary;
+              font-size: 28px;
+              font-family: $font-major;
+              font-weight: 700;
+            }
+            .award-dis {
+              color: $color-primary;
+              font-family: $font-condensed;
+              font-size: 18px;
+            }
+            .award-btn {
+              background-color: rgba(49, 47, 77, 0.51);
+              width: 120px;
+              height: 25px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              text-align: center;
+              border-radius: 32px;
+              transition: all 0.3s ease;
+
+              .a-tag {
+                margin-top: -2px;
+                color: $color-bg;
+                font-family: $font-mono;
+                font-size: 15px;
+                font-weight: 600;
+                text-transform: uppercase;
+              }
+            }
           }
         }
+        // card ends here
       }
- 
     }
   } //main content ends here
   @include footer;
 }
 
 // for tablets
-@media screen and (min-width:481px) and (max-width:1023px){
-  body{
-    .hero-section{
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+  body {
+    .hero-section {
       scale: 1.5;
     }
   }
@@ -324,111 +390,156 @@ body {
 
 // for laptops and higher sized devices
 @media screen and (min-width: 1024px) {
-  body{
-    .header{
-      .hero-section{
-        .hero-img{
+  body {
+    .header {
+      .hero-section {
+        .hero-img {
           width: 250px;
         }
-        .hero-text{
+        .hero-text {
           width: 600px;
 
           .sale-p,
           .hero-heading,
-          .highlighted-text{
+          .highlighted-text {
             font-size: 50px;
           }
           .hero-heading,
-          .highlighted-text{
+          .highlighted-text {
             margin-bottom: 20px;
           }
-          .hero-dis{
+          .hero-dis {
             font-size: 18px;
             margin-bottom: 10px;
           }
         }
-        .hero-btn{
+        .hero-btn {
           margin-top: 0px;
         }
       }
     }
 
-    .main{
-      .compatibility-section{
-        .cmp-dis{
+    .main {
+      .compatibility-section {
+        .cmp-dis {
           font-size: 18px;
           width: 700px;
         }
       }
 
-      .collection-section{
-        .products{
-          padding:90px;
+      .collection-section {
+        .products {
+          padding: 90px;
           padding-top: 30px;
           gap: 35px;
 
-          .product-card{
+          .product-card {
             width: 250px;
             height: 380px;
 
-            .product-img{
+            .product-img {
               width: 200px;
             }
-            .product-name{
+            .product-name {
               font-size: 20px;
             }
-            .product-price{
-              font-size:16px ;
+            .product-price {
+              font-size: 16px;
             }
           }
-          
-          .product-card:nth-child(5){
-            .product-img{
+
+          .product-card:nth-child(5) {
+            .product-img {
               width: 180px;
             }
           }
-          .product-card:nth-child(4){
-            .product-img{
+          .product-card:nth-child(4) {
+            .product-img {
               width: 170px;
               margin-top: 5px;
             }
           }
-          .product-card:nth-child(6){
-            .product-name{
+          .product-card:nth-child(6) {
+            .product-name {
               margin-top: -30px;
             }
           }
-          .product-btn{
+          .product-btn {
             width: 100px;
           }
         }
       }
 
-      .awards-section{
-        display: flex;
-        flex-direction: row;
+      .awards-section {
         height: 70vh;
-        gap: 100px;
-
-        .award-img{
-          display: block;
-          height: 300px;
+        .prev-btn,
+        .next-btn {
+          height: 30px;
+          width: 30px;
+          font-size: 15px;
         }
-        .awards-text{
-          align-items: flex-start;
-          width: 560px;
 
-          .award{
-            font-size:32px ;
-          }
-          .award-dis{
-            text-align: left;
+        .wrapper {
+          .award-slider {
+            // award card
+            .award {
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
+              gap: 100px;
+              margin: 20px;
+              margin-left: 30px;
+              width: 1100px;
+
+              .award-img-container {
+                .award-img {
+                  display: block;
+                  height: 280px;
+                }
+              }
+              .awards-text {
+                align-items: flex-start;
+                width: 540px;
+
+                .award-name {
+                  font-size: 32px;
+                }
+                .award-dis {
+                  text-align: left;
+                }
+              }
+              .award-btn:hover {
+                background-color: rgba(49, 47, 77, 0.685);
+                scale: 1.1;
+                margin-left: 7px;
+              }
+            }
+            // award card
           }
         }
-        .award-btn:hover{
-          background-color:rgba(49, 47, 77, 0.685);
-          scale: 1.1;
-          margin-left: 7px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  body{
+    .header{
+      .hero-section{
+        scale: 1.4;
+      }
+    }
+    .main{
+      .awards-section{
+        
+        .wrapper{
+          .award-slider{
+            .award{
+              margin-left: 40px;
+              width: 1400px;
+            }
+          }
         }
       }
     }
