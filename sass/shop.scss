@@ -471,6 +471,7 @@ body {
       }
 
       .awards-section {
+        overflow: hidden;
         height: 70vh;
         .prev-btn,
         .next-btn {
@@ -480,6 +481,8 @@ body {
         }
 
         .wrapper {
+          margin-top: 20px;
+          overflow: hidden;
           .award-slider {
             // award card
             .award {
