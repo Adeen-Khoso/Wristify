@@ -558,8 +558,9 @@ body .main .awards-section {
   padding-left: 40px;
   padding-right: 40px;
   position: relative;
-  height: 50vh;
+  height: 60vh;
   width: 100vw;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -620,6 +621,9 @@ body .main .awards-section .award-slider .award {
   justify-content: center;
   align-items: center;
   text-align: center;
+  border-radius: 32px;
+  margin: 30px;
+  margin-left: 5px;
 }
 body .main .awards-section .award-slider .award .award-img-container .award-img {
   display: none;
@@ -649,7 +653,7 @@ body .main .awards-section .award-slider .award .awards-text .award-name {
 body .main .awards-section .award-slider .award .awards-text .award-dis {
   color: #312F4D;
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
 }
 body .main .awards-section .award-slider .award .awards-text .award-btn {
   background-color: rgba(49, 47, 77, 0.51);
@@ -888,6 +892,7 @@ body .footer .copyright a {
   }
   body .main .awards-section .wrapper .award-slider .award .awards-text .award-dis {
     text-align: left;
+    font-size: 18px;
   }
   body .main .awards-section .wrapper .award-slider .award .award-btn:hover {
     background-color: rgba(49, 47, 77, 0.685);

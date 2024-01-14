@@ -250,8 +250,9 @@ body {
       padding-left: 40px;
       padding-right: 40px;
       position: relative;
-      height: 50vh;
+      height: 60vh;
       width: 100vw;
+      display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -316,6 +317,10 @@ body {
           justify-content: center;
           align-items: center;
           text-align: center;
+          // background-color: #b3b3b3;
+          border-radius: 32px;
+          margin: 30px;
+          margin-left: 5px;
 
           .award-img-container {
             .award-img {
@@ -348,7 +353,7 @@ body {
             .award-dis {
               color: $color-primary;
               font-family: $font-condensed;
-              font-size: 18px;
+              font-size: 16px;
             }
             .award-btn {
               background-color: rgba(49, 47, 77, 0.51);
@@ -473,6 +478,7 @@ body {
       .awards-section {
         overflow: hidden;
         height: 70vh;
+
         .prev-btn,
         .next-btn {
           height: 30px;
@@ -483,6 +489,7 @@ body {
         .wrapper {
           margin-top: 20px;
           overflow: hidden;
+
           .award-slider {
             // award card
             .award {
@@ -510,6 +517,7 @@ body {
                 }
                 .award-dis {
                   text-align: left;
+                  font-size: 18px;
                 }
               }
               .award-btn:hover {
