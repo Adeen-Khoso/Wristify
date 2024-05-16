@@ -17,6 +17,8 @@
     <script defer src="src/js/slider.js"></script>
     <script defer src="src/js/navbar.js"></script>
     <script defer src="src/js/obsrvrApi.js"></script>
+    <script defer src="src/js/shop.js"></script>
+
   </head>
   <body>
     <header class="header" id="header">
@@ -42,7 +44,8 @@
             <li><a href="about.html" class="link">About</a></li>
             <li><a href="index.html#review-section" class="link">Reviews</a></li>
             <li><a href="index.html#features-section" class="link">Features</a></li>
-            <li><a href="shop.html" class="link shop-link">Shop</a></li>
+            <li><a href="shop.html" class="link ">Shop</a></li>
+            <li><a href="cart.html" class="link"> <p class="cart-text link">Cart</p> <svg class="cart" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="19px" fill="#626098"><path d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z"/></svg></a></li>
           </ul>
         </div>
       </nav>
@@ -74,11 +77,14 @@
 
     <!-- main page content starts here -->
     <main class="main">
+
       <!-- collection section starts here -->
       <div class="collection-section" id="collection-section">
+
         <h1 class="collection-h1">collection</h1>
 
         <div class="products">
+
           <div class="product-card">
             <div class="product-img">
               <img src="assets/g-sphere.png" alt="" />
@@ -86,6 +92,8 @@
             <h1 class="product-name">g-sphere</h1>
             <p class="product-price">$ 300</p>
             <a href="product.html?id=1" class="product-btn">buy</a>
+            <a id="add-cartBtn" class="add-cartBtn "><svg xmlns="http://www.w3.org/2000/svg" class="cart-svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#312F4D"><path d="M440-600v-120H320v-80h120v-120h80v120h120v80H520v120h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z"/></svg></a>
+
           </div>
 
           <div class="product-card">
@@ -95,6 +103,8 @@
             <h1 class="product-name">S-classic</h1>
             <p class="product-price">$ 700</p>
             <a href="product.html?id=2" class="product-btn">buy</a>
+            <a id="add-cartBtn" class="add-cartBtn "><svg xmlns="http://www.w3.org/2000/svg" class="cart-svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#312F4D"><path d="M440-600v-120H320v-80h120v-120h80v120h120v80H520v120h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z"/></svg></a>
+
           </div>
           <div class="product-card">
             <div class="product-img">
@@ -103,28 +113,228 @@
             <h1 class="product-name">celestia</h1>
             <p class="product-price">$ 400</p>
             <a href="product.html?id=3" class="product-btn">buy</a>
+            <a id="add-cartBtn" class="add-cartBtn"><svg xmlns="http://www.w3.org/2000/svg" class="cart-svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#312F4D"><path d="M440-600v-120H320v-80h120v-120h80v120h120v80H520v120h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z"/></svg></a>
+
           </div>
           <div class="product-card">
-            <div class="product-img"><img src="assets/noir.png" alt="" /></div>
-            <h1 class="product-name">noir</h1>
+            <div class="product-img"><img src="assets/g-sphere.png" alt="" /></div>
+            <h1 class="product-name">Noir</h1>
             <p class="product-price">$ 550</p>
             <a href="product.html?id=4" class="product-btn">buy</a>
+            <a id="add-cartBtn" class="add-cartBtn "><svg xmlns="http://www.w3.org/2000/svg" class="cart-svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#312F4D"><path d="M440-600v-120H320v-80h120v-120h80v120h120v80H520v120h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z"/></svg></a>
+
           </div>
           <div class="product-card">
-            <div class="product-img"><img src="assets/nova.png" alt="" /></div>
+            <div class="product-img"><img src="assets/s-classic.png" alt="" /></div>
             <h1 class="product-name">nova</h1>
             <p class="product-price">$ 400</p>
             <a href="product.html?id=5" class="product-btn">buy</a>
+            <a id="add-cartBtn" class="add-cartBtn "><svg xmlns="http://www.w3.org/2000/svg" class="cart-svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#312F4D"><path d="M440-600v-120H320v-80h120v-120h80v120h120v80H520v120h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z"/></svg></a>
+
+          </div>
+
+          <div class="product-card">
+            <div class="product-img"><img src="assets/s-classic.png" alt="" /></div>
+            <h1 class="product-name">Onyx</h1>
+            <p class="product-price">$ 450</p>
+            <a href="product.html?id=6" class="product-btn">buy</a>
+            <a id="add-cartBtn" class="add-cartBtn "><svg xmlns="http://www.w3.org/2000/svg" class="cart-svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#312F4D"><path d="M440-600v-120H320v-80h120v-120h80v120h120v80H520v120h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z"/></svg></a>
+
+          </div>
+
+          <div class="product-card">
+            <div class="product-img"><img src="assets/celestia.png" alt="" /></div>
+            <h1 class="product-name">Aurora</h1>
+            <p class="product-price">$ 250</p>
+            <a href="product.html?id=7" class="product-btn">buy</a>
+            <a id="add-cartBtn" class="add-cartBtn "><svg xmlns="http://www.w3.org/2000/svg" class="cart-svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#312F4D"><path d="M440-600v-120H320v-80h120v-120h80v120h120v80H520v120h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z"/></svg></a>
+
           </div>
           <div class="product-card">
-            <div class="product-img"><img src="assets/onyx.png" alt="" /></div>
-            <h1 class="product-name">onyx</h1>
-            <p class="product-price">$ 400</p>
-            <a href="product.html?id=6" class="product-btn">buy</a>
+            <div class="product-img"><img src="assets/g-sphere.png" alt="Pulse Smartwatch" /></div>
+            <h1 class="product-name">Pulse</h1>
+            <p class="product-price">$ 180</p>
+            <a href="product.html?id=8" class="product-btn">buy</a>
+            <a id="add-cartBtn" class="add-cartBtn "><svg xmlns="http://www.w3.org/2000/svg" class="cart-svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#312F4D"><path d="M440-600v-120H320v-80h120v-120h80v120h120v80H520v120h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z"/></svg></a>
+
           </div>
+        
+          <div class="product-card">
+            <div class="product-img"><img src="assets/celestia.png" alt="Eclipse Smartwatch" /></div>
+            <h1 class="product-name">Eclipse</h1>
+            <p class="product-price">$ 350</p>
+            <a href="product.html?id=9" class="product-btn">buy</a>
+            <a id="add-cartBtn" class="add-cartBtn "><svg xmlns="http://www.w3.org/2000/svg" class="cart-svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#312F4D"><path d="M440-600v-120H320v-80h120v-120h80v120h120v80H520v120h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z"/></svg></a>
+
+          </div>
+        
+          <div class="product-card">
+            <div class="product-img"><img src="assets/g-sphere.png" alt="Zenith Smartwatch" /></div>
+            <h1 class="product-name">Zenith</h1>
+            <p class="product-price">$ 220</p>
+            <a href="product.html?id=10" class="product-btn">buy</a>
+            <a id="add-cartBtn" class="add-cartBtn "><svg xmlns="http://www.w3.org/2000/svg" class="cart-svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#312F4D"><path d="M440-600v-120H320v-80h120v-120h80v120h120v80H520v120h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z"/></svg></a>
+
+          </div>
+        
+          <div class="product-card">
+            <div class="product-img"><img src="assets/celestia.png" alt="Spark Smartwatch" /></div>
+            <h1 class="product-name">Spark</h1>
+            <p class="product-price">$ 150</p>
+            <a href="product.html?id=11" class="product-btn">buy</a>
+            <a id="add-cartBtn" class="add-cartBtn "><svg xmlns="http://www.w3.org/2000/svg" class="cart-svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#312F4D"><path d="M440-600v-120H320v-80h120v-120h80v120h120v80H520v120h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z"/></svg></a>
+
+          </div>
+
+            <div class="product-card">
+              <div class="product-img"><img src="assets/g-sphere.png" alt="Ventus Smartwatch" /></div>
+              <h1 class="product-name">Ventus</h1>
+              <p class="product-price">$ 450</p>
+              <a href="product.html?id=12" class="product-btn">buy</a>
+              <a id="add-cartBtn" class="add-cartBtn "><svg xmlns="http://www.w3.org/2000/svg" class="cart-svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#312F4D"><path d="M440-600v-120H320v-80h120v-120h80v120h120v80H520v120h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z"/></svg></a>
+
+            </div>
+          
+            <div class="product-card">
+              <div class="product-img"><img src="assets/celestia.png" alt="Lumina Smartwatch" /></div>
+              <h1 class="product-name">Lumina</h1>
+              <p class="product-price">$ 280</p>
+              <a href="product.html?id=13" class="product-btn">buy</a>
+              <a id="add-cartBtn" class="add-cartBtn "><svg xmlns="http://www.w3.org/2000/svg" class="cart-svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#312F4D"><path d="M440-600v-120H320v-80h120v-120h80v120h120v80H520v120h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z"/></svg></a>
+
+            </div>
+          
+            <div class="product-card">
+              <div class="product-img"><img src="assets/g-sphere.png" alt="Cygnus Smartwatch" /></div>
+              <h1 class="product-name">Cygnus</h1>
+              <p class="product-price">$ 600</p>
+              <a href="product.html?id=14" class="product-btn">buy</a>
+              <a id="add-cartBtn" class="add-cartBtn "><svg xmlns="http://www.w3.org/2000/svg" class="cart-svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#312F4D"><path d="M440-600v-120H320v-80h120v-120h80v120h120v80H520v120h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z"/></svg></a>
+
+            </div>
+          
+            <div class="product-card">
+              <div class="product-img"><img src="assets/celestia.png" alt="Nyx Smartwatch" /></div>
+              <h1 class="product-name">Nyx</h1>
+              <p class="product-price">$ 320</p>
+              <a href="product.html?id=15" class="product-btn">buy</a>
+              <a id="add-cartBtn" class="add-cartBtn "><svg xmlns="http://www.w3.org/2000/svg" class="cart-svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#312F4D"><path d="M440-600v-120H320v-80h120v-120h80v120h120v80H520v120h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z"/></svg></a>
+
+            </div>
+          
+            <div class="product-card">
+              <div class="product-img"><img src="assets/g-sphere.png" alt="Astra Smartwatch" /></div>
+              <h1 class="product-name">Astra</h1>
+              <p class="product-price">$ 200</p>
+              <a href="product.html?id=16" class="product-btn">buy</a>
+              <a id="add-cartBtn" class="add-cartBtn "><svg xmlns="http://www.w3.org/2000/svg" class="cart-svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#312F4D"><path d="M440-600v-120H320v-80h120v-120h80v120h120v80H520v120h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z"/></svg></a>
+
+            </div>
+          
+            <div class="product-card">
+              <div class="product-img"><img src="assets/celestia.png" alt="Chronos Smartwatch" /></div>
+              <h1 class="product-name">Chronos</h1>
+              <p class="product-price">$ 500</p>
+              <a href="product.html?id=17" class="product-btn">buy</a>
+              <a id="add-cartBtn" class="add-cartBtn "><svg xmlns="http://www.w3.org/2000/svg" class="cart-svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#312F4D"><path d="M440-600v-120H320v-80h120v-120h80v120h120v80H520v120h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z"/></svg></a>
+
+            </div>
+          
+            <div class="product-card">
+              <div class="product-img"><img src="assets/g-sphere.png" alt="Kairos Smartwatch" /></div>
+              <h1 class="product-name">Kairos</h1>
+              <p class="product-price">$ 380</p>
+              <a href="product.html?id=18" class="product-btn">buy</a>
+              <a id="add-cartBtn" class="add-cartBtn "><svg xmlns="http://www.w3.org/2000/svg" class="cart-svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#312F4D"><path d="M440-600v-120H320v-80h120v-120h80v120h120v80H520v120h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z"/></svg></a>
+
+            </div>
+          
+            <div class="product-card">
+              <div class="product-img"><img src="assets/celestia.png" alt="Nexus Smartwatch" /></div>
+              <h1 class="product-name">Nexus</h1>
+              <p class="product-price">$ 420</p>
+              <a href="product.html?id=19" class="product-btn">buy</a>
+              <a id="add-cartBtn" class="add-cartBtn "><svg xmlns="http://www.w3.org/2000/svg" class="cart-svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#312F4D"><path d="M440-600v-120H320v-80h120v-120h80v120h120v80H520v120h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z"/></svg></a>
+
+            </div>
+          
+            <div class="product-card">
+              <div class="product-img"><img src="assets/g-sphere.png" alt="Zenith Sport Smartwatch" /></div>
+              <h1 class="product-name">Zenith Sport</h1>
+              <p class="product-price">$ 250</p>
+              <a href="product.html?id=20" class="product-btn">buy</a>
+              <a id="add-cartBtn" class="add-cartBtn "><svg xmlns="http://www.w3.org/2000/svg" class="cart-svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#312F4D"><path d="M440-600v-120H320v-80h120v-120h80v120h120v80H520v120h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z"/></svg></a>
+
+            </div>
+
+            <div class="product-card">
+              <div class="product-img"><img src="assets/celestia.png" alt="Mina Smartwatch" /></div>
+              <h1 class="product-name">Mina</h1>
+              <p class="product-price">$ 280</p>
+              <a href="product.html?id=21" class="product-btn">buy</a>
+              <a id="add-cartBtn" class="add-cartBtn "><svg xmlns="http://www.w3.org/2000/svg" class="cart-svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#312F4D"><path d="M440-600v-120H320v-80h120v-120h80v120h120v80H520v120h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z"/></svg></a>
+
+            </div>
+          
+            <div class="product-card">
+              <div class="product-img"><img src="assets/g-sphere.png" alt="rono Smartwatch" /></div>
+              <h1 class="product-name">Rono</h1>
+              <p class="product-price">$ 600</p>
+              <a href="product.html?id=22" class="product-btn">buy</a>
+              <a id="add-cartBtn" class="add-cartBtn "><svg xmlns="http://www.w3.org/2000/svg" class="cart-svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#312F4D"><path d="M440-600v-120H320v-80h120v-120h80v120h120v80H520v120h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z"/></svg></a>
+
+            </div>
+          
+            <div class="product-card">
+              <div class="product-img"><img src="assets/celestia.png" alt="Nyx Smartwatch" /></div>
+              <h1 class="product-name">Fixs</h1>
+              <p class="product-price">$ 320</p>
+              <a href="product.html?id=23" class="product-btn">buy</a>
+              <a id="add-cartBtn" class="add-cartBtn "><svg xmlns="http://www.w3.org/2000/svg" class="cart-svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#312F4D"><path d="M440-600v-120H320v-80h120v-120h80v120h120v80H520v120h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z"/></svg></a>
+
+            </div>
+          
+            <div class="product-card">
+              <div class="product-img"><img src="assets/g-sphere.png" alt="Astra Smartwatch" /></div>
+              <h1 class="product-name">Adrate</h1>
+              <p class="product-price">$ 200</p>
+              <a href="product.html?id=24" class="product-btn">buy</a>
+              <a id="add-cartBtn" class="add-cartBtn "><svg xmlns="http://www.w3.org/2000/svg" class="cart-svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#312F4D"><path d="M440-600v-120H320v-80h120v-120h80v120h120v80H520v120h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z"/></svg></a>
+
+            </div>
+          
+            <div class="product-card">
+              <div class="product-img"><img src="assets/celestia.png" alt="Chronos Smartwatch" /></div>
+              <h1 class="product-name">Chromos</h1>
+              <p class="product-price">$ 500</p>
+              <a href="product.html?id=25" class="product-btn">buy</a>
+              <a id="add-cartBtn" class="add-cartBtn "><svg xmlns="http://www.w3.org/2000/svg" class="cart-svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#312F4D"><path d="M440-600v-120H320v-80h120v-120h80v120h120v80H520v120h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z"/></svg></a>
+
+            </div>
+          
+            <div class="product-card">
+              <div class="product-img"><img src="assets/g-sphere.png" alt="Kairos Smartwatch" /></div>
+              <h1 class="product-name">Kaires</h1>
+              <p class="product-price">$ 380</p>
+              <a href="product.html?id=26" class="product-btn">buy</a>
+              <a id="add-cartBtn" class="add-cartBtn "><svg xmlns="http://www.w3.org/2000/svg" class="cart-svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#312F4D"><path d="M440-600v-120H320v-80h120v-120h80v120h120v80H520v120h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z"/></svg></a>
+
+            </div>
+          
+            <div class="product-card">
+              <div class="product-img"><img src="assets/celestia.png" alt="Nexus Smartwatch" /></div>
+              <h1 class="product-name">Nexer</h1>
+              <p class="product-price">$ 420</p>
+              <a href="product.html?id=27" class="product-btn">buy</a>
+              <a id="add-cartBtn" class="add-cartBtn "><svg xmlns="http://www.w3.org/2000/svg" class="cart-svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#312F4D"><path d="M440-600v-120H320v-80h120v-120h80v120h120v80H520v120h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z"/></svg></a>
+
+            </div>
+        
         </div>
       </div>
       <!-- collection section ends here -->
+
+      <audio id="clickSound" src="assets/pop.mp3" preload="auto"></audio>
 
       <!-- cmp section starts here -->
       <div class="compatibility-section hidden">

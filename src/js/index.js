@@ -22,6 +22,3 @@
   counterElements.forEach((element, index) => {
     animateValue(element, 0, targetValues[index], duration);
   });
-
-  
- 
