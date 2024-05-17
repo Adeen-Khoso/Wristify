@@ -69,7 +69,7 @@ const addCartFunc = (product) => {
     if (header.contains(card)) {
       header.removeChild(card);
     }
-  }, 2000);
+  }, 2500);
 };
 
 addCartBtns.forEach((btn) => {
