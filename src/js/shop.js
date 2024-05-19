@@ -1,7 +1,52 @@
+// important DOM elements
 const notiCard = document.getElementById("card");
 const addCartBtns = document.querySelectorAll(".add-cartBtn");
 const header = document.getElementById("header");
 
+let cart = [];
+if (localStorage.getItem("cart")) {
+  cart = JSON.parse(localStorage.getItem("cart"));
+}
+
+// adding evenlistener for add to cart buttons
+addCartBtns.forEach((btn) => {
+
+  btn.addEventListener("click", (e) => {
+
+    const clickedBtn = e.target;
+    const product = clickedBtn.closest(".product-card");
+    const clickSound = document.getElementById('clickSound');
+
+    chooseQuantity(clickSound,product);
+
+    // playSound(clickSound);
+    // addCartFunc(product);
+    // addToLocalStorage(product);
+
+
+  });
+});
+
+const chooseQuantity = (clickSound,product) => {
+  const popup = document.createElement("div");
+  popup.classList.add("popup");
+  popup.id = "popup";
+
+  popup.innerHTML = `
+    <div class="number">0</div>
+    <button class="minus">-</button>
+    <button class="plus">+</button>
+  `
+  header.appendChild(popup)
+}
+
+// function for playing sound when item is added to cart
+const playSound = (audioElement) => {
+    audioElement.currentTime = 0; 
+    audioElement.play(); 
+}
+
+// function for showing the noticification of added to cart
 const addCartFunc = (product) => {
   const productName = product.querySelector(".product-name");
   const nameText = productName.textContent;
@@ -72,17 +117,27 @@ const addCartFunc = (product) => {
   }, 2500);
 };
 
-addCartBtns.forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    const clickedBtn = e.target;
-    const product = clickedBtn.closest(".product-card");
-    const clickSound = document.getElementById('clickSound');
-    playSound(clickSound);
-    addCartFunc(product);
-  });
-});
 
-const playSound = (audioElement) => {
-    audioElement.currentTime = 0; 
-    audioElement.play(); 
-}
+// function for adding item to local storage
+const addToLocalStorage = (product, quantity) => {
+  const productName = product.querySelector(".product-name");
+  const nameText = productName.textContent;
+
+  const productPrice = product.querySelector(".product-price");
+  const priceText = productPrice.textContent;
+
+  let item = {
+    itemPrice : priceText,
+    itemName: nameText,
+    itemQuantity: quantity
+  };
+
+  cart.push(item);
+
+  updateLocalStorage();
+};
+
+const updateLocalStorage = () => {
+  localStorage.setItem("cart", JSON.stringify(cart))
+};
+
