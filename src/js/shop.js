@@ -1,5 +1,4 @@
 // important DOM elements
-const notiCard = document.getElementById("card");
 const addCartBtns = document.querySelectorAll(".add-cartBtn");
 const header = document.getElementById("header");
 
@@ -17,28 +16,26 @@ addCartBtns.forEach((btn) => {
     const product = clickedBtn.closest(".product-card");
     const clickSound = document.getElementById('clickSound');
 
-    chooseQuantity(clickSound,product);
-
-    // playSound(clickSound);
-    // addCartFunc(product);
-    // addToLocalStorage(product);
-
-
+    playSound(clickSound);
+    showPopupFunc(product);
+    addToLocalStorage(product);
+    removeAddCartBtn(clickedBtn);
+    
   });
+
+  const product = btn.closest(".product-card"); 
+  const matchingCartItem = cart.find((item) => {
+    return item.itemName === product.querySelector(".product-name").textContent &&
+           item.itemPrice === product.querySelector(".product-price").textContent;
+  });
+
+  if(matchingCartItem){
+    btn.classList.remove("add-cartBtn");
+    btn.classList.add("hide");
+  }
+  
 });
 
-const chooseQuantity = (clickSound,product) => {
-  const popup = document.createElement("div");
-  popup.classList.add("popup");
-  popup.id = "popup";
-
-  popup.innerHTML = `
-    <div class="number">0</div>
-    <button class="minus">-</button>
-    <button class="plus">+</button>
-  `
-  header.appendChild(popup)
-}
 
 // function for playing sound when item is added to cart
 const playSound = (audioElement) => {
@@ -47,7 +44,7 @@ const playSound = (audioElement) => {
 }
 
 // function for showing the noticification of added to cart
-const addCartFunc = (product) => {
+const showPopupFunc = (product) => {
   const productName = product.querySelector(".product-name");
   const nameText = productName.textContent;
 
@@ -117,9 +114,9 @@ const addCartFunc = (product) => {
   }, 2500);
 };
 
-
 // function for adding item to local storage
-const addToLocalStorage = (product, quantity) => {
+const addToLocalStorage = (product) => {
+
   const productName = product.querySelector(".product-name");
   const nameText = productName.textContent;
 
@@ -129,7 +126,6 @@ const addToLocalStorage = (product, quantity) => {
   let item = {
     itemPrice : priceText,
     itemName: nameText,
-    itemQuantity: quantity
   };
 
   cart.push(item);
@@ -140,4 +136,9 @@ const addToLocalStorage = (product, quantity) => {
 const updateLocalStorage = () => {
   localStorage.setItem("cart", JSON.stringify(cart))
 };
+
+const removeAddCartBtn = (btn) => {
+  btn.classList.remove("add-cartBtn");
+  btn.classList.add("hide");  
+}
 
