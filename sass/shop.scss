@@ -375,7 +375,8 @@ body {
           .product-btn:hover {
             color: #b3b3b3;
           }
-          .add-cartBtn{
+          .add-cartBtn,
+          .added{
             margin-top: 10px;
             height: 30px;
             width: 30px;
@@ -385,7 +386,8 @@ body {
             align-items: center;
             border-radius: 12px;
           }
-          .add-cartBtn:hover{
+          .add-cartBtn,
+          .added:hover{
             background-color: #908ed4c5;
           }
           .cart-svg{

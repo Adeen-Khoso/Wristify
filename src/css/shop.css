@@ -693,7 +693,8 @@ body .main .collection-section .products .product-card .product-btn {
 body .main .collection-section .products .product-card .product-btn:hover {
   color: #b3b3b3;
 }
-body .main .collection-section .products .product-card .add-cartBtn {
+body .main .collection-section .products .product-card .add-cartBtn,
+body .main .collection-section .products .product-card .added {
   margin-top: 10px;
   height: 30px;
   width: 30px;
@@ -703,7 +704,8 @@ body .main .collection-section .products .product-card .add-cartBtn {
   align-items: center;
   border-radius: 12px;
 }
-body .main .collection-section .products .product-card .add-cartBtn:hover {
+body .main .collection-section .products .product-card .add-cartBtn,
+body .main .collection-section .products .product-card .added:hover {
   background-color: rgba(144, 142, 212, 0.7725490196);
 }
 body .main .collection-section .products .product-card .cart-svg {

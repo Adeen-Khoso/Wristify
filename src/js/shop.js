@@ -14,15 +14,18 @@ addCartBtns.forEach((btn) => {
 
     const clickedBtn = e.target;
     const product = clickedBtn.closest(".product-card");
+    const addCartBtn = product.querySelector(".add-cartBtn")
     const clickSound = document.getElementById('clickSound');
 
+    
     playSound(clickSound);
     showPopupFunc(product);
     addToLocalStorage(product);
-    removeAddCartBtn(clickedBtn);
+    removeAddCartBtn(addCartBtn);
     
   });
-
+  
+  
   const product = btn.closest(".product-card"); 
   const matchingCartItem = cart.find((item) => {
     return item.itemName === product.querySelector(".product-name").textContent &&
@@ -32,6 +35,8 @@ addCartBtns.forEach((btn) => {
   if(matchingCartItem){
     btn.classList.remove("add-cartBtn");
     btn.classList.add("hide");
+    btn.nextElementSibling.classList.add("added");
+    btn.nextElementSibling.classList.remove("hide");
   }
   
 });
@@ -50,6 +55,9 @@ const showPopupFunc = (product) => {
 
   const productPrice = product.querySelector(".product-price");
   const priceText = productPrice.textContent;
+
+  const productId = product.querySelector(".product-btn");
+  const linkHref = productId.getAttribute("href");
 
   const card = document.createElement("div");
   card.classList.add("card");
@@ -90,7 +98,7 @@ const showPopupFunc = (product) => {
             </svg>
           </span>
         </div>
-        <div class="product-name">${nameText}</div>
+        <a href="${linkHref}" class="product-name">${nameText}</a>
         <div class="product-price">${priceText}</div>
         <button class="btn-view-cart" type="button">View Cart</button>
       </div>
@@ -139,6 +147,8 @@ const updateLocalStorage = () => {
 
 const removeAddCartBtn = (btn) => {
   btn.classList.remove("add-cartBtn");
-  btn.classList.add("hide");  
+  btn.classList.add("hide"); 
+  btn.nextElementSibling.classList.add("added"); 
+  btn.nextElementSibling.classList.remove("hide");
 }
 
