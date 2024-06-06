@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title -->
+    <title>Cart | Wristify</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/Favicon.png" type="image/x-icon" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="src/css/cart.css">
+
+    <!-- JS -->
+    <script defer src="src/js/navbar.js"></script>
+
+</head>
+<body>
+    <header class="header" id="header">
+
+        <nav class="nav" id="nav" style="box-shadow: none;">
+          <!-- branding -->
+          <a href="index.html" class="branding" id="branding">
+            <h1 class="branding-h1">Wristify</h1>
+            <div class="logo" id="logo">
+              <img src="assets/Logo.png" alt="" class="logo-img" />
+            </div>
+          </a>
+  
+          <!-- hamburger -->
+          <div class="hamburger" id="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+  
+          <!-- navigation bar with all cta's-->
+          <div class="navigation" id="navigation">
+            <ul class="ul-tag">
+              <li><a href="about.html" class="link">About</a></li>
+              <li><a href="index.html#review-section" class="link">Reviews</a></li>
+              <li><a href="index.html#features-section" class="link">Features</a></li>
+              <li><a href="shop.html" class="link ">Shop</a></li>
+              <li><a href="cart.html" class="link"> <p class="cart-text link">Cart</p> <svg class="cart" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="19px" fill="#626098"><path d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z"/></svg></a></li>
+            </ul>
+          </div>
+        </nav>
+        <!-- navbar ends -->
+
+    </header>
+
+    <!-- main content -->
+    <main class="main" id="main">
+
+      <div class="your-cart" id="your-cart">
+        Your Cart ( 1 )
+      </div>
+
+      <div class="cart-items" id="cart-items">
+
+      <!-- cart item starts -->
+        <div class="cart-item">
+
+            <div class="item-img">
+              <img src="assets/celestia.png" alt="">
+            </div>
+
+            <div class="item-text">
+              <div class="item-name"> G-Sphere </div>
+              <div class="item-details">
+                <div class="detail" id="item-price">Color:<span class="default-text">Default</span></div>
+                <div class="detail">Product ID: <span class="default-text">Default</span></div>
+                <div class="quantity" >
+                  <label for="myInput" class="label">Quantity:</label>
+                  <input type="number" class="input" id="quantity" value="1">
+                </div>
+              </div>
+              <div class="remove-btn" id="remove-btn">
+                Remove
+              </div>
+            </div>
+
+            <div class="total-price" id="total-price">
+              $499
+            </div>
+
+        </div>
+      <!-- cart item ends -->
+
+      </div>
+
+      <div class="summary" id="summary">
+
+        <div class="s-heading">
+          Summary
+        </div>
+        
+        <div class="horizontal-line"></div>
+
+        <div class="summary-details">
+          <div class="s-detail">Subtotal :  $1200</div>
+          <div class="s-detail">Tax% :  0.0</div>
+          <div class="s-detail">Discount :  0%</div>
+        </div>
+
+        <div class="total">
+          Total: <span class="total-value">$499.00</span>
+        </div>
+
+        <div class="checkout-btn" id="checkout-btn">
+          Checkout
+        </div>
+
+      </div>
+
+    </main>
+
+
+</body>
+</html>
