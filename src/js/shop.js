@@ -100,7 +100,7 @@ const showPopupFunc = (product) => {
         </div>
         <a href="${linkHref}" class="product-name">${nameText}</a>
         <div class="product-price">${priceText}</div>
-        <button class="btn-view-cart" type="button">View Cart</button>
+        <a href="cart.html" class="btn-view-cart" type="button">View Cart</a>
       </div>
       <div class="progress-line"></div>
     </div>
@@ -131,9 +131,14 @@ const addToLocalStorage = (product) => {
   const productPrice = product.querySelector(".product-price");
   const priceText = productPrice.textContent;
 
+  const productImage = product.querySelector(".product-img");
+  const img = productImage.querySelector('img');
+  const src = img.getAttribute('src');
+
   let item = {
     itemPrice : priceText,
     itemName: nameText,
+    itemImgSrc : src
   };
 
   cart.push(item);
