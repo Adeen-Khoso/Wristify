@@ -13,10 +13,14 @@ if (localStorage.getItem("cart")) {
   cart = JSON.parse(localStorage.getItem("cart"));
 }
 
+const showEmptyCart = () => {
+  summary.classList.add('hide');
+  emptyCart.classList.remove('hide');
+  emptyCart.classList.add('cart-item','empty-cart');
+}
+
 if(cart == ''){
-    summary.classList.add('hide');
-    emptyCart.classList.remove('hide');
-    emptyCart.classList.add('cart-item','empty-cart');
+  showEmptyCart();
 }else{
 
   cart.forEach(element => {
@@ -63,6 +67,10 @@ if(cart == ''){
 
         counter--;
         counterUpdate();
+
+        if(itemContainer.querySelector('.cart-item') == null){
+          showEmptyCart();
+        }
       })
       
     });
