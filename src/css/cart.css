@@ -1246,6 +1246,7 @@ body .footer .copyright a {
   font-weight: 700;
   color: #312F4D;
   font-size: 1rem;
+  text-transform: capitalize;
 }
 .main .cart-items .cart-item .item-text .item-details .detail,
 .main .cart-items .cart-item .item-text .item-details .label {

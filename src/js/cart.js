@@ -2,7 +2,11 @@ const itemContainer = document.getElementById('cart-items');
 const summary = document.getElementById('summary');
 const emptyCart = document.getElementById('empty-cart');
 const yourCart = document.getElementById('your-cart');
+
 let counter = 0;
+const counterUpdate = () => {
+  yourCart.innerHTML = `Your Cart ( ${counter} )`;
+}
 
 let cart = [];
 if (localStorage.getItem("cart")) {
@@ -18,6 +22,7 @@ if(cart == ''){
   cart.forEach(element => {
 
     counter ++;
+    counterUpdate();
 
     const item = document.createElement('div');
     item.classList.add('cart-item');
@@ -47,19 +52,21 @@ if(cart == ''){
   
   });  
     
-    const removeBtn = document.getElementById('remove-btn').addEventListener('click', (e) => {
-      
-      const clickedBtn = e.target;
-      const item = clickedBtn.closest('.cart-item');
-      
-      item.classList.remove('cart-item');
-      item.classList.add('hide');
+    
+    const removeBtns = document.querySelectorAll('.remove-btn');
+    removeBtns.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        const clickedBtn = e.target;
+        const item = clickedBtn.closest('.cart-item');
+        
+        itemContainer.removeChild(item);
+
+        counter--;
+        counterUpdate();
+      })
       
     });
 
 }
 
-yourCart.innerHTML = `Your Cart ( ${counter} )`
-
-
-// need to solve the remove button bug 
+// remove button bug solved, only need to remove the item from cart permanently and from local storage on click of remove button
