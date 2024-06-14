@@ -19,6 +19,10 @@ const showEmptyCart = () => {
   emptyCart.classList.add('cart-item','empty-cart');
 }
 
+const updateLocalStorage = () => {
+  localStorage.setItem("cart", JSON.stringify(cart))
+};
+
 if(cart == ''){
   showEmptyCart();
 }else{
@@ -60,12 +64,19 @@ if(cart == ''){
     const removeBtns = document.querySelectorAll('.remove-btn');
     removeBtns.forEach((btn) => {
       btn.addEventListener('click', (e) => {
+
         const clickedBtn = e.target;
         const item = clickedBtn.closest('.cart-item');
+        const itemName = item.querySelector('.item-name');
+        
+        const filteredCart = cart.filter(element => element.itemName != itemName.innerText);
+        cart.length = 0;
+        cart.push(...filteredCart);
+        updateLocalStorage();
         
         itemContainer.removeChild(item);
 
-        counter--;
+        --counter;
         counterUpdate();
 
         if(itemContainer.querySelector('.cart-item') == null){
@@ -77,4 +88,4 @@ if(cart == ''){
 
 }
 
-// remove button bug solved, only need to remove the item from cart permanently and from local storage on click of remove button
+// remove button functionality completed, now remains summary functionality, quantity functionality etc
