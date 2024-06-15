@@ -3,9 +3,9 @@ const addCartBtns = document.querySelectorAll(".add-cartBtn");
 const header = document.getElementById("header");
 
 let cart = [];
-if (localStorage.getItem("cart")) {
-  cart = JSON.parse(localStorage.getItem("cart"));
-}
+// if (localStorage.getItem("cart")) {
+//   cart = JSON.parse(localStorage.getItem("cart"));
+// }
 
 // adding evenlistener for add to cart buttons
 addCartBtns.forEach((btn) => {
@@ -143,12 +143,14 @@ const addToLocalStorage = (product) => {
 
   cart.push(item);
 
-  updateLocalStorage();
+  // updateLocalStorage();//to be uncommented later
 };
 
 const updateLocalStorage = () => {
   localStorage.setItem("cart", JSON.stringify(cart))
 };
+updateLocalStorage();//to be removed
+
 
 const removeAddCartBtn = (btn) => {
   btn.classList.remove("add-cartBtn");
