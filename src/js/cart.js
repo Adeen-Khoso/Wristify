@@ -2,6 +2,8 @@ const itemContainer = document.getElementById('cart-items');
 const summary = document.getElementById('summary');
 const emptyCart = document.getElementById('empty-cart');
 const yourCart = document.getElementById('your-cart');
+const subtotalContainer = document.getElementById('subtotal');
+const totalValContainer = document.getElementById('total-value');
 
 let counter = 0;
 const counterUpdate = () => {
@@ -23,16 +25,30 @@ const updateLocalStorage = () => {
   localStorage.setItem("cart", JSON.stringify(cart))
 };
 
+let total = 0;
+const updateSummary = () => {
+  subtotalContainer.innerHTML = `Subtotal : $ ${total}`;
+  totalValContainer.innerHTML = `$ ${total}.00`;
+}
+
+
 if(cart == ''){
   counter = 0;
   counterUpdate();
   showEmptyCart();
+  total = 0;
+  updateSummary();
 }else{
 
   cart.forEach(element => {
 
     counter ++;
     counterUpdate();
+
+    let array = element.itemPrice.split(' ');
+    let price = Number(array[1]);
+    total += price;    
+    updateSummary();
 
     const item = document.createElement('div');
     item.classList.add('cart-item');
@@ -62,32 +78,35 @@ if(cart == ''){
   
   });  
     
-    
-    const removeBtns = document.querySelectorAll('.remove-btn');
-    removeBtns.forEach((btn) => {
-      btn.addEventListener('click', (e) => {
+  const removeBtns = document.querySelectorAll('.remove-btn');
+  removeBtns.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
 
-        const clickedBtn = e.target;
-        const item = clickedBtn.closest('.cart-item');
-        const itemName = item.querySelector('.item-name');
-        
-        const filteredCart = cart.filter(element => element.itemName != itemName.innerText);
-        cart.length = 0;
-        cart.push(...filteredCart);
-        updateLocalStorage();
-        
-        itemContainer.removeChild(item);
+      const clickedBtn = e.target;
+      const item = clickedBtn.closest('.cart-item');
+      const itemName = item.querySelector('.item-name');
+      const itemPrice = item.querySelector('.total-price');
 
-        --counter;
-        counterUpdate();
-
-        if(itemContainer.querySelector('.cart-item') == null){
-          showEmptyCart();
-        }
-      })
+      let array = itemPrice.innerText.split(' ');
+      let price = Number(array[1]);
+      total -= price;    
+      updateSummary();
       
-    });
+      const filteredCart = cart.filter(element => element.itemName != itemName.innerText);
+      cart.length = 0;
+      cart.push(...filteredCart);
+      updateLocalStorage();
+      
+      itemContainer.removeChild(item);
+
+      --counter;
+      counterUpdate();
+
+      if(itemContainer.querySelector('.cart-item') == null){
+        showEmptyCart();
+      }
+    })
+      
+  });
 
 }
-
-// remove button functionality completed, now remains summary functionality, quantity functionality etc
