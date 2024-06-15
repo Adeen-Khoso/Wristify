@@ -118,13 +118,13 @@
             }
         }
         .empty-cart{
-            height: 120px  !important;
+            height: 70px  !important;
 
             .empty-div{
                 display: flex;
                 flex-direction: column;
                 font-family: $font-poppins;
-                font-size: 25px;
+                font-size: 16px;
                 font-weight: 700;
                 color: $color-primary;
 
@@ -260,6 +260,26 @@
                     font-size: 22px;
                     color: $color-light;
                     margin-top: 2px;
+                }
+            }
+            .empty-cart{
+                height: 120px  !important;
+    
+                .empty-div{
+                    display: flex;
+                    flex-direction: column;
+                    font-family: $font-poppins;
+                    font-size: 25px;
+                    font-weight: 700;
+                    color: $color-primary;
+    
+                    .empty-a{
+                        color: $color-light;
+                        font-family: $font-poppins;
+                        font-weight: 600;
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
                 }
             }
         }
