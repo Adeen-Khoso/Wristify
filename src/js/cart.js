@@ -24,6 +24,8 @@ const updateLocalStorage = () => {
 };
 
 if(cart == ''){
+  counter = 0;
+  counterUpdate();
   showEmptyCart();
 }else{
 
